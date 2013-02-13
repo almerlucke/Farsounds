@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9B23912516CC2650001C49E5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B23912416CC2650001C49E5 /* main.cpp */; };
 		9B23912716CC2650001C49E5 /* Farsounds.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B23912616CC2650001C49E5 /* Farsounds.1 */; };
+		9B23912F16CC2787001C49E5 /* FSModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B23912D16CC2787001C49E5 /* FSModule.cpp */; };
+		9B23913216CC2797001C49E5 /* FSPatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B23913016CC2797001C49E5 /* FSPatch.cpp */; };
+		9B23913516CC27E8001C49E5 /* FSTestModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B23913316CC27E8001C49E5 /* FSTestModule.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,12 @@
 		9B23912116CC2650001C49E5 /* Farsounds */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Farsounds; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B23912416CC2650001C49E5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9B23912616CC2650001C49E5 /* Farsounds.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Farsounds.1; sourceTree = "<group>"; };
+		9B23912D16CC2787001C49E5 /* FSModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSModule.cpp; sourceTree = "<group>"; };
+		9B23912E16CC2787001C49E5 /* FSModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSModule.h; sourceTree = "<group>"; };
+		9B23913016CC2797001C49E5 /* FSPatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSPatch.cpp; sourceTree = "<group>"; };
+		9B23913116CC2797001C49E5 /* FSPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPatch.h; sourceTree = "<group>"; };
+		9B23913316CC27E8001C49E5 /* FSTestModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSTestModule.cpp; sourceTree = "<group>"; };
+		9B23913416CC27E8001C49E5 /* FSTestModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTestModule.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,12 @@
 		9B23912316CC2650001C49E5 /* Farsounds */ = {
 			isa = PBXGroup;
 			children = (
+				9B23913116CC2797001C49E5 /* FSPatch.h */,
+				9B23913016CC2797001C49E5 /* FSPatch.cpp */,
+				9B23912E16CC2787001C49E5 /* FSModule.h */,
+				9B23912D16CC2787001C49E5 /* FSModule.cpp */,
+				9B23913416CC27E8001C49E5 /* FSTestModule.h */,
+				9B23913316CC27E8001C49E5 /* FSTestModule.cpp */,
 				9B23912416CC2650001C49E5 /* main.cpp */,
 				9B23912616CC2650001C49E5 /* Farsounds.1 */,
 			);
@@ -118,6 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B23912516CC2650001C49E5 /* main.cpp in Sources */,
+				9B23912F16CC2787001C49E5 /* FSModule.cpp in Sources */,
+				9B23913216CC2797001C49E5 /* FSPatch.cpp in Sources */,
+				9B23913516CC27E8001C49E5 /* FSTestModule.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
