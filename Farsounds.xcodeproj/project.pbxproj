@@ -1,0 +1,221 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B23912516CC2650001C49E5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B23912416CC2650001C49E5 /* main.cpp */; };
+		9B23912716CC2650001C49E5 /* Farsounds.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B23912616CC2650001C49E5 /* Farsounds.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9B23911F16CC2650001C49E5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				9B23912716CC2650001C49E5 /* Farsounds.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9B23912116CC2650001C49E5 /* Farsounds */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Farsounds; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B23912416CC2650001C49E5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9B23912616CC2650001C49E5 /* Farsounds.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Farsounds.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B23911E16CC2650001C49E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B23911816CC2650001C49E5 = {
+			isa = PBXGroup;
+			children = (
+				9B23912316CC2650001C49E5 /* Farsounds */,
+				9B23912216CC2650001C49E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B23912216CC2650001C49E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B23912116CC2650001C49E5 /* Farsounds */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B23912316CC2650001C49E5 /* Farsounds */ = {
+			isa = PBXGroup;
+			children = (
+				9B23912416CC2650001C49E5 /* main.cpp */,
+				9B23912616CC2650001C49E5 /* Farsounds.1 */,
+			);
+			path = Farsounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B23912016CC2650001C49E5 /* Farsounds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B23912A16CC2650001C49E5 /* Build configuration list for PBXNativeTarget "Farsounds" */;
+			buildPhases = (
+				9B23911D16CC2650001C49E5 /* Sources */,
+				9B23911E16CC2650001C49E5 /* Frameworks */,
+				9B23911F16CC2650001C49E5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Farsounds;
+			productName = Farsounds;
+			productReference = 9B23912116CC2650001C49E5 /* Farsounds */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B23911916CC2650001C49E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Farcoding;
+			};
+			buildConfigurationList = 9B23911C16CC2650001C49E5 /* Build configuration list for PBXProject "Farsounds" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9B23911816CC2650001C49E5;
+			productRefGroup = 9B23912216CC2650001C49E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B23912016CC2650001C49E5 /* Farsounds */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B23911D16CC2650001C49E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B23912516CC2650001C49E5 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9B23912816CC2650001C49E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9B23912916CC2650001C49E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9B23912B16CC2650001C49E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9B23912C16CC2650001C49E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B23911C16CC2650001C49E5 /* Build configuration list for PBXProject "Farsounds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B23912816CC2650001C49E5 /* Debug */,
+				9B23912916CC2650001C49E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B23912A16CC2650001C49E5 /* Build configuration list for PBXNativeTarget "Farsounds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B23912B16CC2650001C49E5 /* Debug */,
+				9B23912C16CC2650001C49E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B23911916CC2650001C49E5 /* Project object */;
+}
