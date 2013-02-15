@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		9B23912516CC2650001C49E5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B23912416CC2650001C49E5 /* main.cpp */; };
 		9B23912716CC2650001C49E5 /* Farsounds.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B23912616CC2650001C49E5 /* Farsounds.1 */; };
-		9B23912F16CC2787001C49E5 /* FSModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B23912D16CC2787001C49E5 /* FSModule.cpp */; };
-		9B23913216CC2797001C49E5 /* FSPatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B23913016CC2797001C49E5 /* FSPatch.cpp */; };
 		9B23913516CC27E8001C49E5 /* FSTestModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B23913316CC27E8001C49E5 /* FSTestModule.cpp */; };
+		9B97FA3216CE2E6E00B029F9 /* FSModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA2816CE2E6E00B029F9 /* FSModule.cpp */; };
+		9B97FA3316CE2E6E00B029F9 /* FSModuleInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA2A16CE2E6E00B029F9 /* FSModuleInput.cpp */; };
+		9B97FA3416CE2E6E00B029F9 /* FSModuleOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA2C16CE2E6E00B029F9 /* FSModuleOutput.cpp */; };
+		9B97FA3516CE2E6E00B029F9 /* FSPatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA2E16CE2E6E00B029F9 /* FSPatch.cpp */; };
+		9B97FA3616CE2E6E00B029F9 /* FSProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA3016CE2E6E00B029F9 /* FSProxy.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,12 +34,18 @@
 		9B23912116CC2650001C49E5 /* Farsounds */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Farsounds; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B23912416CC2650001C49E5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9B23912616CC2650001C49E5 /* Farsounds.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Farsounds.1; sourceTree = "<group>"; };
-		9B23912D16CC2787001C49E5 /* FSModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSModule.cpp; sourceTree = "<group>"; };
-		9B23912E16CC2787001C49E5 /* FSModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSModule.h; sourceTree = "<group>"; };
-		9B23913016CC2797001C49E5 /* FSPatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSPatch.cpp; sourceTree = "<group>"; };
-		9B23913116CC2797001C49E5 /* FSPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPatch.h; sourceTree = "<group>"; };
 		9B23913316CC27E8001C49E5 /* FSTestModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSTestModule.cpp; sourceTree = "<group>"; };
 		9B23913416CC27E8001C49E5 /* FSTestModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTestModule.h; sourceTree = "<group>"; };
+		9B97FA2816CE2E6E00B029F9 /* FSModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSModule.cpp; sourceTree = "<group>"; };
+		9B97FA2916CE2E6E00B029F9 /* FSModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSModule.h; sourceTree = "<group>"; };
+		9B97FA2A16CE2E6E00B029F9 /* FSModuleInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSModuleInput.cpp; sourceTree = "<group>"; };
+		9B97FA2B16CE2E6E00B029F9 /* FSModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSModuleInput.h; sourceTree = "<group>"; };
+		9B97FA2C16CE2E6E00B029F9 /* FSModuleOutput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSModuleOutput.cpp; sourceTree = "<group>"; };
+		9B97FA2D16CE2E6E00B029F9 /* FSModuleOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSModuleOutput.h; sourceTree = "<group>"; };
+		9B97FA2E16CE2E6E00B029F9 /* FSPatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSPatch.cpp; sourceTree = "<group>"; };
+		9B97FA2F16CE2E6E00B029F9 /* FSPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPatch.h; sourceTree = "<group>"; };
+		9B97FA3016CE2E6E00B029F9 /* FSProxy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSProxy.cpp; sourceTree = "<group>"; };
+		9B97FA3116CE2E6E00B029F9 /* FSProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSProxy.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,16 +78,30 @@
 		9B23912316CC2650001C49E5 /* Farsounds */ = {
 			isa = PBXGroup;
 			children = (
-				9B23913116CC2797001C49E5 /* FSPatch.h */,
-				9B23913016CC2797001C49E5 /* FSPatch.cpp */,
-				9B23912E16CC2787001C49E5 /* FSModule.h */,
-				9B23912D16CC2787001C49E5 /* FSModule.cpp */,
+				9B97FA2716CE2DD900B029F9 /* Core */,
 				9B23913416CC27E8001C49E5 /* FSTestModule.h */,
 				9B23913316CC27E8001C49E5 /* FSTestModule.cpp */,
 				9B23912416CC2650001C49E5 /* main.cpp */,
 				9B23912616CC2650001C49E5 /* Farsounds.1 */,
 			);
 			path = Farsounds;
+			sourceTree = "<group>";
+		};
+		9B97FA2716CE2DD900B029F9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9B97FA2816CE2E6E00B029F9 /* FSModule.cpp */,
+				9B97FA2916CE2E6E00B029F9 /* FSModule.h */,
+				9B97FA2A16CE2E6E00B029F9 /* FSModuleInput.cpp */,
+				9B97FA2B16CE2E6E00B029F9 /* FSModuleInput.h */,
+				9B97FA2C16CE2E6E00B029F9 /* FSModuleOutput.cpp */,
+				9B97FA2D16CE2E6E00B029F9 /* FSModuleOutput.h */,
+				9B97FA2E16CE2E6E00B029F9 /* FSPatch.cpp */,
+				9B97FA2F16CE2E6E00B029F9 /* FSPatch.h */,
+				9B97FA3016CE2E6E00B029F9 /* FSProxy.cpp */,
+				9B97FA3116CE2E6E00B029F9 /* FSProxy.h */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,9 +156,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B23912516CC2650001C49E5 /* main.cpp in Sources */,
-				9B23912F16CC2787001C49E5 /* FSModule.cpp in Sources */,
-				9B23913216CC2797001C49E5 /* FSPatch.cpp in Sources */,
 				9B23913516CC27E8001C49E5 /* FSTestModule.cpp in Sources */,
+				9B97FA3216CE2E6E00B029F9 /* FSModule.cpp in Sources */,
+				9B97FA3316CE2E6E00B029F9 /* FSModuleInput.cpp in Sources */,
+				9B97FA3416CE2E6E00B029F9 /* FSModuleOutput.cpp in Sources */,
+				9B97FA3516CE2E6E00B029F9 /* FSPatch.cpp in Sources */,
+				9B97FA3616CE2E6E00B029F9 /* FSProxy.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +258,7 @@
 				9B23912C16CC2650001C49E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
