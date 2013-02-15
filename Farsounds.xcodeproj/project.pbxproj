@@ -15,6 +15,22 @@
 		9B97FA3416CE2E6E00B029F9 /* FSModuleOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA2C16CE2E6E00B029F9 /* FSModuleOutput.cpp */; };
 		9B97FA3516CE2E6E00B029F9 /* FSPatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA2E16CE2E6E00B029F9 /* FSPatch.cpp */; };
 		9B97FA3616CE2E6E00B029F9 /* FSProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA3016CE2E6E00B029F9 /* FSProxy.cpp */; };
+		9B97FA3A16CE2FAE00B029F9 /* libsndfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B97FA3916CE2FAE00B029F9 /* libsndfile.a */; };
+		9B97FA3E16CE315F00B029F9 /* FSEnvironment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA3C16CE315F00B029F9 /* FSEnvironment.cpp */; };
+		9B97FA4116CE31ED00B029F9 /* FSUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA3F16CE31ED00B029F9 /* FSUtils.cpp */; };
+		9B97FA4416CE34D300B029F9 /* FSPhasor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA4216CE34D300B029F9 /* FSPhasor.cpp */; };
+		9B97FA4716CE359B00B029F9 /* FSPhasorModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA4516CE359B00B029F9 /* FSPhasorModule.cpp */; };
+		9B97FA4D16CE3B2500B029F9 /* FSSineModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA4B16CE3B2500B029F9 /* FSSineModule.cpp */; };
+		9B97FA5016CE5A0C00B029F9 /* FSADSREnvelope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA4E16CE5A0C00B029F9 /* FSADSREnvelope.cpp */; };
+		9B97FA5316CE608F00B029F9 /* FSScalerModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA5116CE608F00B029F9 /* FSScalerModule.cpp */; };
+		9B97FA5616CE623A00B029F9 /* FSTriggerModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA5416CE623A00B029F9 /* FSTriggerModule.cpp */; };
+		9B97FA5916CE63C300B029F9 /* FSADSREnvelopeModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA5716CE63C300B029F9 /* FSADSREnvelopeModule.cpp */; };
+		9B97FA5C16CE691900B029F9 /* FSSampleAndHoldModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA5A16CE691900B029F9 /* FSSampleAndHoldModule.cpp */; };
+		9B97FA5F16CE6B8800B029F9 /* FSDivisorModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA5D16CE6B8800B029F9 /* FSDivisorModule.cpp */; };
+		9B97FA6216CE6E5200B029F9 /* FSAllpass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA6016CE6E5200B029F9 /* FSAllpass.cpp */; };
+		9B97FA6516CE6F1700B029F9 /* FSAllpassModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA6316CE6F1600B029F9 /* FSAllpassModule.cpp */; };
+		9B97FA6816CE79BD00B029F9 /* FSPanningModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA6616CE79BD00B029F9 /* FSPanningModule.cpp */; };
+		9B97FA6B16CE8BD900B029F9 /* FSTriggeredRandomModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA6916CE8BD800B029F9 /* FSTriggeredRandomModule.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +62,37 @@
 		9B97FA2F16CE2E6E00B029F9 /* FSPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPatch.h; sourceTree = "<group>"; };
 		9B97FA3016CE2E6E00B029F9 /* FSProxy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSProxy.cpp; sourceTree = "<group>"; };
 		9B97FA3116CE2E6E00B029F9 /* FSProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSProxy.h; sourceTree = "<group>"; };
+		9B97FA3916CE2FAE00B029F9 /* libsndfile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsndfile.a; path = ../../../../../../../usr/local/lib/libsndfile.a; sourceTree = "<group>"; };
+		9B97FA3C16CE315F00B029F9 /* FSEnvironment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSEnvironment.cpp; sourceTree = "<group>"; };
+		9B97FA3D16CE315F00B029F9 /* FSEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSEnvironment.h; sourceTree = "<group>"; };
+		9B97FA3F16CE31ED00B029F9 /* FSUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSUtils.cpp; sourceTree = "<group>"; };
+		9B97FA4016CE31ED00B029F9 /* FSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUtils.h; sourceTree = "<group>"; };
+		9B97FA4216CE34D300B029F9 /* FSPhasor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSPhasor.cpp; sourceTree = "<group>"; };
+		9B97FA4316CE34D300B029F9 /* FSPhasor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPhasor.h; sourceTree = "<group>"; };
+		9B97FA4516CE359B00B029F9 /* FSPhasorModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSPhasorModule.cpp; sourceTree = "<group>"; };
+		9B97FA4616CE359B00B029F9 /* FSPhasorModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPhasorModule.h; sourceTree = "<group>"; };
+		9B97FA4B16CE3B2500B029F9 /* FSSineModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSineModule.cpp; sourceTree = "<group>"; };
+		9B97FA4C16CE3B2500B029F9 /* FSSineModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSineModule.h; sourceTree = "<group>"; };
+		9B97FA4E16CE5A0C00B029F9 /* FSADSREnvelope.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSADSREnvelope.cpp; sourceTree = "<group>"; };
+		9B97FA4F16CE5A0C00B029F9 /* FSADSREnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSADSREnvelope.h; sourceTree = "<group>"; };
+		9B97FA5116CE608F00B029F9 /* FSScalerModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSScalerModule.cpp; sourceTree = "<group>"; };
+		9B97FA5216CE608F00B029F9 /* FSScalerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSScalerModule.h; sourceTree = "<group>"; };
+		9B97FA5416CE623A00B029F9 /* FSTriggerModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSTriggerModule.cpp; sourceTree = "<group>"; };
+		9B97FA5516CE623A00B029F9 /* FSTriggerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTriggerModule.h; sourceTree = "<group>"; };
+		9B97FA5716CE63C300B029F9 /* FSADSREnvelopeModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSADSREnvelopeModule.cpp; sourceTree = "<group>"; };
+		9B97FA5816CE63C300B029F9 /* FSADSREnvelopeModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSADSREnvelopeModule.h; sourceTree = "<group>"; };
+		9B97FA5A16CE691900B029F9 /* FSSampleAndHoldModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSampleAndHoldModule.cpp; sourceTree = "<group>"; };
+		9B97FA5B16CE691900B029F9 /* FSSampleAndHoldModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSampleAndHoldModule.h; sourceTree = "<group>"; };
+		9B97FA5D16CE6B8800B029F9 /* FSDivisorModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSDivisorModule.cpp; sourceTree = "<group>"; };
+		9B97FA5E16CE6B8800B029F9 /* FSDivisorModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDivisorModule.h; sourceTree = "<group>"; };
+		9B97FA6016CE6E5200B029F9 /* FSAllpass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSAllpass.cpp; sourceTree = "<group>"; };
+		9B97FA6116CE6E5200B029F9 /* FSAllpass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAllpass.h; sourceTree = "<group>"; };
+		9B97FA6316CE6F1600B029F9 /* FSAllpassModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSAllpassModule.cpp; sourceTree = "<group>"; };
+		9B97FA6416CE6F1700B029F9 /* FSAllpassModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAllpassModule.h; sourceTree = "<group>"; };
+		9B97FA6616CE79BD00B029F9 /* FSPanningModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSPanningModule.cpp; sourceTree = "<group>"; };
+		9B97FA6716CE79BD00B029F9 /* FSPanningModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPanningModule.h; sourceTree = "<group>"; };
+		9B97FA6916CE8BD800B029F9 /* FSTriggeredRandomModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSTriggeredRandomModule.cpp; sourceTree = "<group>"; };
+		9B97FA6A16CE8BD800B029F9 /* FSTriggeredRandomModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTriggeredRandomModule.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B97FA3A16CE2FAE00B029F9 /* libsndfile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +126,9 @@
 		9B23912316CC2650001C49E5 /* Farsounds */ = {
 			isa = PBXGroup;
 			children = (
+				9B97FA3B16CE312500B029F9 /* Utils */,
+				9B97FA3816CE2F7000B029F9 /* Libs */,
+				9B97FA3716CE2F1800B029F9 /* Modules */,
 				9B97FA2716CE2DD900B029F9 /* Core */,
 				9B23913416CC27E8001C49E5 /* FSTestModule.h */,
 				9B23913316CC27E8001C49E5 /* FSTestModule.cpp */,
@@ -90,18 +141,70 @@
 		9B97FA2716CE2DD900B029F9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				9B97FA2816CE2E6E00B029F9 /* FSModule.cpp */,
 				9B97FA2916CE2E6E00B029F9 /* FSModule.h */,
-				9B97FA2A16CE2E6E00B029F9 /* FSModuleInput.cpp */,
+				9B97FA2816CE2E6E00B029F9 /* FSModule.cpp */,
 				9B97FA2B16CE2E6E00B029F9 /* FSModuleInput.h */,
-				9B97FA2C16CE2E6E00B029F9 /* FSModuleOutput.cpp */,
+				9B97FA2A16CE2E6E00B029F9 /* FSModuleInput.cpp */,
 				9B97FA2D16CE2E6E00B029F9 /* FSModuleOutput.h */,
-				9B97FA2E16CE2E6E00B029F9 /* FSPatch.cpp */,
+				9B97FA2C16CE2E6E00B029F9 /* FSModuleOutput.cpp */,
 				9B97FA2F16CE2E6E00B029F9 /* FSPatch.h */,
-				9B97FA3016CE2E6E00B029F9 /* FSProxy.cpp */,
+				9B97FA2E16CE2E6E00B029F9 /* FSPatch.cpp */,
 				9B97FA3116CE2E6E00B029F9 /* FSProxy.h */,
+				9B97FA3016CE2E6E00B029F9 /* FSProxy.cpp */,
+				9B97FA3D16CE315F00B029F9 /* FSEnvironment.h */,
+				9B97FA3C16CE315F00B029F9 /* FSEnvironment.cpp */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		9B97FA3716CE2F1800B029F9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9B97FA4616CE359B00B029F9 /* FSPhasorModule.h */,
+				9B97FA4516CE359B00B029F9 /* FSPhasorModule.cpp */,
+				9B97FA4C16CE3B2500B029F9 /* FSSineModule.h */,
+				9B97FA4B16CE3B2500B029F9 /* FSSineModule.cpp */,
+				9B97FA5216CE608F00B029F9 /* FSScalerModule.h */,
+				9B97FA5116CE608F00B029F9 /* FSScalerModule.cpp */,
+				9B97FA5516CE623A00B029F9 /* FSTriggerModule.h */,
+				9B97FA5416CE623A00B029F9 /* FSTriggerModule.cpp */,
+				9B97FA5816CE63C300B029F9 /* FSADSREnvelopeModule.h */,
+				9B97FA5716CE63C300B029F9 /* FSADSREnvelopeModule.cpp */,
+				9B97FA5B16CE691900B029F9 /* FSSampleAndHoldModule.h */,
+				9B97FA5A16CE691900B029F9 /* FSSampleAndHoldModule.cpp */,
+				9B97FA5E16CE6B8800B029F9 /* FSDivisorModule.h */,
+				9B97FA5D16CE6B8800B029F9 /* FSDivisorModule.cpp */,
+				9B97FA6416CE6F1700B029F9 /* FSAllpassModule.h */,
+				9B97FA6316CE6F1600B029F9 /* FSAllpassModule.cpp */,
+				9B97FA6716CE79BD00B029F9 /* FSPanningModule.h */,
+				9B97FA6616CE79BD00B029F9 /* FSPanningModule.cpp */,
+				9B97FA6A16CE8BD800B029F9 /* FSTriggeredRandomModule.h */,
+				9B97FA6916CE8BD800B029F9 /* FSTriggeredRandomModule.cpp */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9B97FA3816CE2F7000B029F9 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				9B97FA3916CE2FAE00B029F9 /* libsndfile.a */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		9B97FA3B16CE312500B029F9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9B97FA4016CE31ED00B029F9 /* FSUtils.h */,
+				9B97FA3F16CE31ED00B029F9 /* FSUtils.cpp */,
+				9B97FA4316CE34D300B029F9 /* FSPhasor.h */,
+				9B97FA4216CE34D300B029F9 /* FSPhasor.cpp */,
+				9B97FA4F16CE5A0C00B029F9 /* FSADSREnvelope.h */,
+				9B97FA4E16CE5A0C00B029F9 /* FSADSREnvelope.cpp */,
+				9B97FA6116CE6E5200B029F9 /* FSAllpass.h */,
+				9B97FA6016CE6E5200B029F9 /* FSAllpass.cpp */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +265,21 @@
 				9B97FA3416CE2E6E00B029F9 /* FSModuleOutput.cpp in Sources */,
 				9B97FA3516CE2E6E00B029F9 /* FSPatch.cpp in Sources */,
 				9B97FA3616CE2E6E00B029F9 /* FSProxy.cpp in Sources */,
+				9B97FA3E16CE315F00B029F9 /* FSEnvironment.cpp in Sources */,
+				9B97FA4116CE31ED00B029F9 /* FSUtils.cpp in Sources */,
+				9B97FA4416CE34D300B029F9 /* FSPhasor.cpp in Sources */,
+				9B97FA4716CE359B00B029F9 /* FSPhasorModule.cpp in Sources */,
+				9B97FA4D16CE3B2500B029F9 /* FSSineModule.cpp in Sources */,
+				9B97FA5016CE5A0C00B029F9 /* FSADSREnvelope.cpp in Sources */,
+				9B97FA5316CE608F00B029F9 /* FSScalerModule.cpp in Sources */,
+				9B97FA5616CE623A00B029F9 /* FSTriggerModule.cpp in Sources */,
+				9B97FA5916CE63C300B029F9 /* FSADSREnvelopeModule.cpp in Sources */,
+				9B97FA5C16CE691900B029F9 /* FSSampleAndHoldModule.cpp in Sources */,
+				9B97FA5F16CE6B8800B029F9 /* FSDivisorModule.cpp in Sources */,
+				9B97FA6216CE6E5200B029F9 /* FSAllpass.cpp in Sources */,
+				9B97FA6516CE6F1700B029F9 /* FSAllpassModule.cpp in Sources */,
+				9B97FA6816CE79BD00B029F9 /* FSPanningModule.cpp in Sources */,
+				9B97FA6B16CE8BD900B029F9 /* FSTriggeredRandomModule.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +346,8 @@
 		9B23912B16CC2650001C49E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -235,6 +355,8 @@
 		9B23912C16CC2650001C49E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
