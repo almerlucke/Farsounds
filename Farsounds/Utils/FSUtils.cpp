@@ -15,6 +15,7 @@
 #include <cstdlib>
 #include <ctime>
 
+#pragma mark - Generate Soundfile
 void FSUtils::generateSoundFile(const char *path, FSModule *module, double durationInSeconds)
 {
     long long framesToGenerate = FSEnvironment::sampleRate * durationInSeconds;
@@ -56,6 +57,7 @@ void FSUtils::generateSoundFile(const char *path, FSModule *module, double durat
     sf_close(file);
 }
 
+#pragma mark - Others
 double FSUtils::wrapSample(double sample, double low, bool lowInclusive, double high, bool highInclusive)
 {
     double range = 0.0;
@@ -99,6 +101,7 @@ double FSUtils::tableLookup(double input, double *table, int tableLength)
     return table[xi] * (1.0 - fraction) + table[xi + 1] * fraction;
 }
 
+#pragma mark - Random
 void FSUtils::seedRand()
 {
     srand((unsigned int)time(NULL));
@@ -113,4 +116,11 @@ double FSUtils::randRange(double low, double high)
     }
     
     return low + (high - low) * rand() / (double)RAND_MAX;
+}
+
+#pragma mark - Conversions
+// midi note to frequency (A4 - 69 is base)
+double FSUtils::mtof(int note)
+{
+    return pow(2, (note - 69.0) / 12.0) * 440;
 }

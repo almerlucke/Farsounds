@@ -9,7 +9,6 @@
 #ifndef __Farsounds__FSADSREnvelope__
 #define __Farsounds__FSADSREnvelope__
 
-#include "FSEnvironment.h"
 #include <stdint.h>
 
 class FSADSREnvelope {

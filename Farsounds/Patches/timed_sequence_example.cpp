@@ -1,40 +1,34 @@
 //
-//  main.cpp
+//  timed_sequence_example.cpp
 //  Farsounds
 //
-//  Created by aFrogleap on 2/13/13.
+//  Created by aFrogleap on 2/16/13.
 //  Copyright (c) 2013 Farcoding. All rights reserved.
 //
 
-#include <iostream>
+#include "timed_sequence_example.h"
 #include "FSEnvironment.h"
-#include "FSSineModule.h"
-#include "FSPatch.h"
 #include "FSUtils.h"
+#include "FSPatch.h"
+#include "FSSineModule.h"
 #include "FSADSREnvelopeModule.h"
 #include "FSScalerModule.h"
-#include "FSTriggerModule.h"
-#include "FSSampleAndHoldModule.h"
-#include "FSDivisorModule.h"
 #include "FSAllpassModule.h"
-#include "FSPanningModule.h"
-#include "FSTriggeredRandomModule.h"
 #include "FSTimedTriggerModule.h"
 #include "FSSequenceModule.h"
 
-
-int main(int argc, const char * argv[])
+void timed_sequence_example()
 {
     FSUtils::seedRand();
     
     double times[] = {1.0, 0.125, 0.125, 0.25, 0.25, 0.75, -1.25, 0.0625, 0.0625, 0.0625, 0.0625,
-                      0.0625, 0.0625, 0.03125, 0.03125, 0.03125, 0.03125, 0.03125, 0.03125, 0.125, 0.125, 0.125, 0.125, 0.25, 0.25};
+        0.0625, 0.0625, 0.03125, 0.03125, 0.03125, 0.03125, 0.03125, 0.03125, 0.125, 0.125, 0.125, 0.125, 0.25, 0.25};
     double freqSequence[] = {FSUtils::mtof(40), FSUtils::mtof(45), FSUtils::mtof(51),
-                             FSUtils::mtof(52), FSUtils::mtof(57), FSUtils::mtof(63), FSUtils::mtof(44),
-                             FSUtils::mtof(56), FSUtils::mtof(70), FSUtils::mtof(82),
-                             FSUtils::mtof(45), FSUtils::mtof(44), FSUtils::mtof(42), FSUtils::mtof(40)};
+        FSUtils::mtof(52), FSUtils::mtof(57), FSUtils::mtof(63), FSUtils::mtof(44),
+        FSUtils::mtof(56), FSUtils::mtof(70), FSUtils::mtof(82),
+        FSUtils::mtof(45), FSUtils::mtof(44), FSUtils::mtof(42), FSUtils::mtof(40)};
     double modSequence[] = {FSUtils::mtof(40), FSUtils::mtof(40) * 1.11, FSUtils::mtof(52), FSUtils::mtof(52),
-                            FSUtils::mtof(57), FSUtils::mtof(57) * 0.99, FSUtils::mtof(56), FSUtils::mtof(56)};
+        FSUtils::mtof(57), FSUtils::mtof(57) * 0.99, FSUtils::mtof(56), FSUtils::mtof(56)};
     
     FSPatch *mainPatch = new FSPatch(0, 2);
     FSSineModule *sine = new FSSineModule(1000.0);
@@ -97,6 +91,4 @@ int main(int argc, const char * argv[])
     FSUtils::generateSoundFile("/Users/aFrogleap/Desktop/test.wav", mainPatch, 120);
     
     delete mainPatch;
-    
-    return 0;
 }

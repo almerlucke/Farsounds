@@ -7,6 +7,7 @@
 //
 
 #include "FSPhasorModule.h"
+#include <stddef.h>
 
 FSPhasorModule::FSPhasorModule() : FSModule(3, 1), _frequency(100.0), _phaseOffset(0.0)
 {

@@ -22,8 +22,12 @@ public:
     // azimuth range -1 -- 1
     static void equalPowerPanMono(double input, double azimuth, double *left, double *right);
     
+    // random
     static void seedRand();
     static double randRange(double low, double high);
+    
+    // midi note to frequency (A4 - 69 is base)
+    static double mtof(int note);
 };
 
 #endif /* defined(__Farsounds__FSUtils__) */

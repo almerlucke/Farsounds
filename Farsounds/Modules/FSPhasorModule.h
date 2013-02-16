@@ -11,8 +11,6 @@
 
 #include "FSModule.h"
 #include "FSPhasor.h"
-#include "FSEnvironment.h"
-#include <stddef.h>
 
 class FSPhasorModule : public FSModule {
     double _frequency;
