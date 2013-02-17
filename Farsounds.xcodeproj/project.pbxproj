@@ -13,6 +13,8 @@
 		9B1F6E1916CF02DA00556320 /* timed_sequence_example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F6E1716CF02DA00556320 /* timed_sequence_example.cpp */; };
 		9B23912516CC2650001C49E5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B23912416CC2650001C49E5 /* main.cpp */; };
 		9B23912716CC2650001C49E5 /* Farsounds.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B23912616CC2650001C49E5 /* Farsounds.1 */; };
+		9B83FFC116D17C3200BAA0C2 /* FSSoundFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B83FFBF16D17C3200BAA0C2 /* FSSoundFile.cpp */; };
+		9B83FFC416D180C000BAA0C2 /* FSSoundFileModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B83FFC216D180C000BAA0C2 /* FSSoundFileModule.cpp */; };
 		9B97FA3216CE2E6E00B029F9 /* FSModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA2816CE2E6E00B029F9 /* FSModule.cpp */; };
 		9B97FA3316CE2E6E00B029F9 /* FSModuleInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA2A16CE2E6E00B029F9 /* FSModuleInput.cpp */; };
 		9B97FA3416CE2E6E00B029F9 /* FSModuleOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA2C16CE2E6E00B029F9 /* FSModuleOutput.cpp */; };
@@ -61,6 +63,10 @@
 		9B23912116CC2650001C49E5 /* Farsounds */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Farsounds; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B23912416CC2650001C49E5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9B23912616CC2650001C49E5 /* Farsounds.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Farsounds.1; sourceTree = "<group>"; };
+		9B83FFBF16D17C3200BAA0C2 /* FSSoundFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSoundFile.cpp; sourceTree = "<group>"; };
+		9B83FFC016D17C3200BAA0C2 /* FSSoundFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSoundFile.h; sourceTree = "<group>"; };
+		9B83FFC216D180C000BAA0C2 /* FSSoundFileModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSoundFileModule.cpp; sourceTree = "<group>"; };
+		9B83FFC316D180C000BAA0C2 /* FSSoundFileModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSoundFileModule.h; sourceTree = "<group>"; };
 		9B97FA2816CE2E6E00B029F9 /* FSModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSModule.cpp; sourceTree = "<group>"; };
 		9B97FA2916CE2E6E00B029F9 /* FSModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSModule.h; sourceTree = "<group>"; };
 		9B97FA2A16CE2E6E00B029F9 /* FSModuleInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSModuleInput.cpp; sourceTree = "<group>"; };
@@ -203,6 +209,8 @@
 				9B1F6E1116CEDBED00556320 /* FSTimedTriggerModule.cpp */,
 				9B1F6E1516CEE45A00556320 /* FSSequenceModule.h */,
 				9B1F6E1416CEE45A00556320 /* FSSequenceModule.cpp */,
+				9B83FFC316D180C000BAA0C2 /* FSSoundFileModule.h */,
+				9B83FFC216D180C000BAA0C2 /* FSSoundFileModule.cpp */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -226,6 +234,8 @@
 				9B97FA4E16CE5A0C00B029F9 /* FSADSREnvelope.cpp */,
 				9B97FA6116CE6E5200B029F9 /* FSAllpass.h */,
 				9B97FA6016CE6E5200B029F9 /* FSAllpass.cpp */,
+				9B83FFC016D17C3200BAA0C2 /* FSSoundFile.h */,
+				9B83FFBF16D17C3200BAA0C2 /* FSSoundFile.cpp */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -306,6 +316,8 @@
 				9B1F6E1316CEDBED00556320 /* FSTimedTriggerModule.cpp in Sources */,
 				9B1F6E1616CEE45B00556320 /* FSSequenceModule.cpp in Sources */,
 				9B1F6E1916CF02DA00556320 /* timed_sequence_example.cpp in Sources */,
+				9B83FFC116D17C3200BAA0C2 /* FSSoundFile.cpp in Sources */,
+				9B83FFC416D180C000BAA0C2 /* FSSoundFileModule.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@
 #include <stddef.h>
 
 
-FSTimedTriggerModule::FSTimedTriggerModule(double *times, int numTimes, double initialDelay, bool loop) : FSModule(1, 2)
+FSTimedTriggerModule::FSTimedTriggerModule(double *times, int numTimes, double initialDelay, bool loop) : FSModule(1, 3)
 {
     _numTimes = numTimes;
     
@@ -50,6 +50,7 @@ void FSTimedTriggerModule::run()
     
     _outputs[0].value = 0.0;
     _outputs[1].value = 0.0;
+    _outputs[2].value = 0.0;
     
     if (_timeIndex < _numTimes) {
         if (_counter <= 0) {
@@ -62,8 +63,11 @@ void FSTimedTriggerModule::run()
                 nextTime = -nextTime;
             }
             
-            if ((_timeIndex == _numTimes) && _loop) {
-                _timeIndex = 0;
+            if (_timeIndex == _numTimes) {
+                _outputs[2].value = 1.0;
+                if (_loop) {
+                    _timeIndex = 0;
+                }
             }
             
             // keep track of fractions to avoid too much deviation from real time when converting seconds to samples

@@ -23,6 +23,10 @@ FSModule::FSModule(int numInputs, int numOutputs) : _numInputs(numInputs), _numO
     for (int i = 0; i < numInputs; i++) {
         _inputs[i] = NULL;
     }
+    
+    for (int i = 0; i < numOutputs; i++) {
+        _outputs[i].value = 0.0;
+    }
 }
 
 FSModule::~FSModule()
