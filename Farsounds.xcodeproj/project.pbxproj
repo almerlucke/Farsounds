@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0CFC1C16D29A8900A5027A /* FSRampModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B0CFC1A16D29A8900A5027A /* FSRampModule.cpp */; };
 		9B1F6E1016CEDA4B00556320 /* multipatch_fm_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F6E0E16CEDA4B00556320 /* multipatch_fm_test.cpp */; };
 		9B1F6E1316CEDBED00556320 /* FSTimedTriggerModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F6E1116CEDBED00556320 /* FSTimedTriggerModule.cpp */; };
 		9B1F6E1616CEE45B00556320 /* FSSequenceModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F6E1416CEE45A00556320 /* FSSequenceModule.cpp */; };
@@ -52,6 +53,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B0CFC1A16D29A8900A5027A /* FSRampModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSRampModule.cpp; sourceTree = "<group>"; };
+		9B0CFC1B16D29A8900A5027A /* FSRampModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRampModule.h; sourceTree = "<group>"; };
 		9B1F6E0E16CEDA4B00556320 /* multipatch_fm_test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multipatch_fm_test.cpp; sourceTree = "<group>"; };
 		9B1F6E0F16CEDA4B00556320 /* multipatch_fm_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = multipatch_fm_test.h; sourceTree = "<group>"; };
 		9B1F6E1116CEDBED00556320 /* FSTimedTriggerModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSTimedTriggerModule.cpp; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 				9B1F6E1116CEDBED00556320 /* FSTimedTriggerModule.cpp */,
 				9B1F6E1516CEE45A00556320 /* FSSequenceModule.h */,
 				9B1F6E1416CEE45A00556320 /* FSSequenceModule.cpp */,
+				9B0CFC1B16D29A8900A5027A /* FSRampModule.h */,
+				9B0CFC1A16D29A8900A5027A /* FSRampModule.cpp */,
 				9B83FFC316D180C000BAA0C2 /* FSSoundFileModule.h */,
 				9B83FFC216D180C000BAA0C2 /* FSSoundFileModule.cpp */,
 			);
@@ -318,6 +323,7 @@
 				9B1F6E1916CF02DA00556320 /* timed_sequence_example.cpp in Sources */,
 				9B83FFC116D17C3200BAA0C2 /* FSSoundFile.cpp in Sources */,
 				9B83FFC416D180C000BAA0C2 /* FSSoundFileModule.cpp in Sources */,
+				9B0CFC1C16D29A8900A5027A /* FSRampModule.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

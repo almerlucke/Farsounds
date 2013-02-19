@@ -96,10 +96,9 @@ double FSUtils::tableLookup(double input, double *table, int tableLength)
 {
     double xf = input * (tableLength - 1);
     int xi1 = xf;
-    int xi2 = (xi1 < (tableLength - 1))? xi1 + 1 : xi1;
     double fraction = xf - xi1;
     
-    return table[xi1] * (1.0 - fraction) + table[xi2 + 1] * fraction;
+    return table[xi1] * (1.0 - fraction) + table[xi1 + 1] * fraction;
 }
 
 #pragma mark - Random
