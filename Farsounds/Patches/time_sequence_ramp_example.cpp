@@ -1,12 +1,12 @@
 //
-//  main.cpp
+//  time_sequence_ramp_example.cpp
 //  Farsounds
 //
-//  Created by aFrogleap on 2/13/13.
+//  Created by aFrogleap on 2/20/13.
 //  Copyright (c) 2013 Farcoding. All rights reserved.
 //
 
-#include <iostream>
+#include "time_sequence_ramp_example.h"
 #include "FSEnvironment.h"
 #include "FSUtils.h"
 #include "FSPatch.h"
@@ -20,8 +20,10 @@
 #include "FSAllpassModule.h"
 #include "FSMoogFilterModule.h"
 
+
+
 FSPatch *singleSequencer(double freqScale, double ampScale, double moogFreq, double moogSpeed, double rampTime, double rampShape,
-                          double *frequencies, int numFrequencies, double *triggerTimes, int numTriggerTimes)
+                         double *frequencies, int numFrequencies, double *triggerTimes, int numTriggerTimes)
 {
     FSPatch *sequencerPatch = new FSPatch(0, 1);
     FSPhasorModule *phasor = new FSPhasorModule();
@@ -70,7 +72,7 @@ FSPatch *singleSequencer(double freqScale, double ampScale, double moogFreq, dou
     return sequencerPatch;
 }
 
-int main(int argc, const char * argv[])
+void timed_sequence_ramp_example()
 {
     FSUtils::seedRand();
     
@@ -78,8 +80,8 @@ int main(int argc, const char * argv[])
     double triggerTimes2[] = {0.375, 1.0, 1.75, 0.1875};
     double triggerTimes3[] = {0.625, 1.5, 1.1875};
     double frequencies[] = {FSUtils::mtof(48), FSUtils::mtof(51), FSUtils::mtof(55), FSUtils::mtof(53),
-                            FSUtils::mtof(51), FSUtils::mtof(50), FSUtils::mtof(62), FSUtils::mtof(62),
-                            FSUtils::mtof(48)};
+        FSUtils::mtof(51), FSUtils::mtof(50), FSUtils::mtof(62), FSUtils::mtof(62),
+        FSUtils::mtof(48)};
     
     FSPatch *mainPatch = new FSPatch(0, 2);
     FSPatch *sequencer1 = singleSequencer(1.0, 0.375, 3000.0, 0.1, 0.025, 3.0, frequencies, 9, triggerTimes, 12);
@@ -102,6 +104,4 @@ int main(int argc, const char * argv[])
     FSUtils::generateSoundFile("/Users/aFrogleap/Desktop/test.wav", mainPatch, 40);
     
     delete mainPatch;
-    
-    return 0;
 }

@@ -37,6 +37,8 @@
 		9B97FA6516CE6F1700B029F9 /* FSAllpassModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA6316CE6F1600B029F9 /* FSAllpassModule.cpp */; };
 		9B97FA6816CE79BD00B029F9 /* FSPanningModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA6616CE79BD00B029F9 /* FSPanningModule.cpp */; };
 		9B97FA6B16CE8BD900B029F9 /* FSTriggeredRandomModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA6916CE8BD800B029F9 /* FSTriggeredRandomModule.cpp */; };
+		9BB7570316D5223300323F54 /* FSMoogFilterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BB7570116D5223200323F54 /* FSMoogFilterModule.cpp */; };
+		9BB7570616D5340A00323F54 /* time_sequence_ramp_example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BB7570416D5340A00323F54 /* time_sequence_ramp_example.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,6 +113,11 @@
 		9B97FA6716CE79BD00B029F9 /* FSPanningModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPanningModule.h; sourceTree = "<group>"; };
 		9B97FA6916CE8BD800B029F9 /* FSTriggeredRandomModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSTriggeredRandomModule.cpp; sourceTree = "<group>"; };
 		9B97FA6A16CE8BD800B029F9 /* FSTriggeredRandomModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTriggeredRandomModule.h; sourceTree = "<group>"; };
+		9BB756FA16D4434B00323F54 /* notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = notes; sourceTree = "<group>"; };
+		9BB7570116D5223200323F54 /* FSMoogFilterModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSMoogFilterModule.cpp; sourceTree = "<group>"; };
+		9BB7570216D5223200323F54 /* FSMoogFilterModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMoogFilterModule.h; sourceTree = "<group>"; };
+		9BB7570416D5340A00323F54 /* time_sequence_ramp_example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = time_sequence_ramp_example.cpp; sourceTree = "<group>"; };
+		9BB7570516D5340A00323F54 /* time_sequence_ramp_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_sequence_ramp_example.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +139,8 @@
 				9B1F6E0E16CEDA4B00556320 /* multipatch_fm_test.cpp */,
 				9B1F6E1816CF02DA00556320 /* timed_sequence_example.h */,
 				9B1F6E1716CF02DA00556320 /* timed_sequence_example.cpp */,
+				9BB7570516D5340A00323F54 /* time_sequence_ramp_example.h */,
+				9BB7570416D5340A00323F54 /* time_sequence_ramp_example.cpp */,
 			);
 			path = Patches;
 			sourceTree = "<group>";
@@ -162,6 +171,7 @@
 				9B97FA2716CE2DD900B029F9 /* Core */,
 				9B23912416CC2650001C49E5 /* main.cpp */,
 				9B23912616CC2650001C49E5 /* Farsounds.1 */,
+				9BB756FA16D4434B00323F54 /* notes */,
 			);
 			path = Farsounds;
 			sourceTree = "<group>";
@@ -216,6 +226,8 @@
 				9B0CFC1A16D29A8900A5027A /* FSRampModule.cpp */,
 				9B83FFC316D180C000BAA0C2 /* FSSoundFileModule.h */,
 				9B83FFC216D180C000BAA0C2 /* FSSoundFileModule.cpp */,
+				9BB7570216D5223200323F54 /* FSMoogFilterModule.h */,
+				9BB7570116D5223200323F54 /* FSMoogFilterModule.cpp */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -324,6 +336,8 @@
 				9B83FFC116D17C3200BAA0C2 /* FSSoundFile.cpp in Sources */,
 				9B83FFC416D180C000BAA0C2 /* FSSoundFileModule.cpp in Sources */,
 				9B0CFC1C16D29A8900A5027A /* FSRampModule.cpp in Sources */,
+				9BB7570316D5223300323F54 /* FSMoogFilterModule.cpp in Sources */,
+				9BB7570616D5340A00323F54 /* time_sequence_ramp_example.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

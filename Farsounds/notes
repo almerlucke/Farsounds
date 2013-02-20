@@ -1,0 +1,27 @@
+multi voice:
+external parameters
+module factory for voices
+trigger voice with midi note: pitch, velocity, duration
+
+
+
+class FSModuleFactory
+{
+    int numOutputsInModule;
+    FSModule *produce(double pitch, double amp, double duration) {
+        
+    }
+}
+
+class FSVoice
+{
+    uin64_t _duration;
+    FSModule *_module;
+    FSVoice *_prev;
+    FSVoice *_next;
+}
+
+class FSVoiceSpawnModule
+{
+    
+}
