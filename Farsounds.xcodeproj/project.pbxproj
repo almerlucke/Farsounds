@@ -39,6 +39,9 @@
 		9B97FA6B16CE8BD900B029F9 /* FSTriggeredRandomModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA6916CE8BD800B029F9 /* FSTriggeredRandomModule.cpp */; };
 		9BB7570316D5223300323F54 /* FSMoogFilterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BB7570116D5223200323F54 /* FSMoogFilterModule.cpp */; };
 		9BB7570616D5340A00323F54 /* time_sequence_ramp_example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BB7570416D5340A00323F54 /* time_sequence_ramp_example.cpp */; };
+		9BFDE39C16D53E2C00E8D4EF /* FSSpawnFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE39A16D53E2C00E8D4EF /* FSSpawnFactory.cpp */; };
+		9BFDE39F16D53E4A00E8D4EF /* FSSpawnModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE39D16D53E4A00E8D4EF /* FSSpawnModule.cpp */; };
+		9BFDE3A216D55DE600E8D4EF /* spawnfactory_example1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE3A016D55DE600E8D4EF /* spawnfactory_example1.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,6 +121,12 @@
 		9BB7570216D5223200323F54 /* FSMoogFilterModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMoogFilterModule.h; sourceTree = "<group>"; };
 		9BB7570416D5340A00323F54 /* time_sequence_ramp_example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = time_sequence_ramp_example.cpp; sourceTree = "<group>"; };
 		9BB7570516D5340A00323F54 /* time_sequence_ramp_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_sequence_ramp_example.h; sourceTree = "<group>"; };
+		9BFDE39A16D53E2C00E8D4EF /* FSSpawnFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSpawnFactory.cpp; sourceTree = "<group>"; };
+		9BFDE39B16D53E2C00E8D4EF /* FSSpawnFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSpawnFactory.h; sourceTree = "<group>"; };
+		9BFDE39D16D53E4A00E8D4EF /* FSSpawnModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSpawnModule.cpp; sourceTree = "<group>"; };
+		9BFDE39E16D53E4A00E8D4EF /* FSSpawnModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSpawnModule.h; sourceTree = "<group>"; };
+		9BFDE3A016D55DE600E8D4EF /* spawnfactory_example1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = spawnfactory_example1.cpp; sourceTree = "<group>"; };
+		9BFDE3A116D55DE600E8D4EF /* spawnfactory_example1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spawnfactory_example1.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +150,8 @@
 				9B1F6E1716CF02DA00556320 /* timed_sequence_example.cpp */,
 				9BB7570516D5340A00323F54 /* time_sequence_ramp_example.h */,
 				9BB7570416D5340A00323F54 /* time_sequence_ramp_example.cpp */,
+				9BFDE3A116D55DE600E8D4EF /* spawnfactory_example1.h */,
+				9BFDE3A016D55DE600E8D4EF /* spawnfactory_example1.cpp */,
 			);
 			path = Patches;
 			sourceTree = "<group>";
@@ -191,6 +202,10 @@
 				9B97FA3016CE2E6E00B029F9 /* FSProxy.cpp */,
 				9B97FA3D16CE315F00B029F9 /* FSEnvironment.h */,
 				9B97FA3C16CE315F00B029F9 /* FSEnvironment.cpp */,
+				9BFDE39B16D53E2C00E8D4EF /* FSSpawnFactory.h */,
+				9BFDE39A16D53E2C00E8D4EF /* FSSpawnFactory.cpp */,
+				9BFDE39E16D53E4A00E8D4EF /* FSSpawnModule.h */,
+				9BFDE39D16D53E4A00E8D4EF /* FSSpawnModule.cpp */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -338,6 +353,9 @@
 				9B0CFC1C16D29A8900A5027A /* FSRampModule.cpp in Sources */,
 				9BB7570316D5223300323F54 /* FSMoogFilterModule.cpp in Sources */,
 				9BB7570616D5340A00323F54 /* time_sequence_ramp_example.cpp in Sources */,
+				9BFDE39C16D53E2C00E8D4EF /* FSSpawnFactory.cpp in Sources */,
+				9BFDE39F16D53E4A00E8D4EF /* FSSpawnModule.cpp in Sources */,
+				9BFDE3A216D55DE600E8D4EF /* spawnfactory_example1.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

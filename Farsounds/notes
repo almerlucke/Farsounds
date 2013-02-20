@@ -5,7 +5,7 @@ trigger voice with midi note: pitch, velocity, duration
 
 
 
-class FSModuleFactory
+class FSSpawnModuleFactory
 {
     int numOutputsInModule;
     FSModule *produce(double pitch, double amp, double duration) {
@@ -13,15 +13,15 @@ class FSModuleFactory
     }
 }
 
-class FSVoice
+class FSSpawnVoice
 {
     uin64_t _duration;
     FSModule *_module;
-    FSVoice *_prev;
-    FSVoice *_next;
+    FSSpawnVoice *_prev;
+    FSSpawnVoice *_next;
 }
 
-class FSVoiceSpawnModule
+class FSSpawnModule
 {
     
 }

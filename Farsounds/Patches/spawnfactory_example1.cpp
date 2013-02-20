@@ -1,12 +1,13 @@
 //
-//  main.cpp
+//  spawnfactory_example1.cpp
 //  Farsounds
 //
-//  Created by aFrogleap on 2/13/13.
+//  Created by aFrogleap on 2/20/13.
 //  Copyright (c) 2013 Farcoding. All rights reserved.
 //
 
-#include <iostream>
+#include "spawnfactory_example1.h"
+
 #include "FSEnvironment.h"
 #include "FSUtils.h"
 #include "FSPatch.h"
@@ -18,6 +19,8 @@
 #include "FSScalerModule.h"
 #include "FSPanningModule.h"
 #include "FSTimedTriggerModule.h"
+
+#include <cstddef>
 
 
 class FSSineRampFactory : public FSSpawnFactory {
@@ -97,7 +100,7 @@ public:
 };
 
 
-int main(int argc, const char * argv[])
+void spawn_factory_example(void)
 {
     FSUtils::seedRand();
     
@@ -118,8 +121,6 @@ int main(int argc, const char * argv[])
     mainPatch->outputProxyAtIndex(1)->connect(rightScaler, 0, 0);
     
     FSUtils::generateSoundFile("/Users/aFrogleap/Desktop/test.wav", mainPatch, 40);
-
-    delete mainPatch;
     
-    return 0;
+    delete mainPatch;
 }
