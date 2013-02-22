@@ -9,13 +9,16 @@
 #ifndef __Farsounds__FSSpawnFactory__
 #define __Farsounds__FSSpawnFactory__
 
-#include <stdint.h>
 #include "FSModule.h"
+#include <stdint.h>
+#include <cstddef>
 
 struct FSSpawn {
     uint64_t duration;
     FSModule *module;
     
+    FSSpawn() { duration = 0; module = NULL; }
+    FSSpawn(uint64_t dur, FSModule *mod) { duration = dur; module = mod; }
     ~FSSpawn() { delete module; }
 };
 

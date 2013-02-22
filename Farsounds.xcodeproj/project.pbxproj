@@ -39,6 +39,8 @@
 		9B97FA6B16CE8BD900B029F9 /* FSTriggeredRandomModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA6916CE8BD800B029F9 /* FSTriggeredRandomModule.cpp */; };
 		9BB7570316D5223300323F54 /* FSMoogFilterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BB7570116D5223200323F54 /* FSMoogFilterModule.cpp */; };
 		9BB7570616D5340A00323F54 /* time_sequence_ramp_example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BB7570416D5340A00323F54 /* time_sequence_ramp_example.cpp */; };
+		9BE4E76D16D6908B002E107E /* FSOneShotTriggerModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4E76B16D6908B002E107E /* FSOneShotTriggerModule.cpp */; };
+		9BE4E77016D69295002E107E /* FSMultiplierModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4E76E16D69295002E107E /* FSMultiplierModule.cpp */; };
 		9BFDE39C16D53E2C00E8D4EF /* FSSpawnFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE39A16D53E2C00E8D4EF /* FSSpawnFactory.cpp */; };
 		9BFDE39F16D53E4A00E8D4EF /* FSSpawnModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE39D16D53E4A00E8D4EF /* FSSpawnModule.cpp */; };
 		9BFDE3A216D55DE600E8D4EF /* spawnfactory_example1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE3A016D55DE600E8D4EF /* spawnfactory_example1.cpp */; };
@@ -121,6 +123,10 @@
 		9BB7570216D5223200323F54 /* FSMoogFilterModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMoogFilterModule.h; sourceTree = "<group>"; };
 		9BB7570416D5340A00323F54 /* time_sequence_ramp_example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = time_sequence_ramp_example.cpp; sourceTree = "<group>"; };
 		9BB7570516D5340A00323F54 /* time_sequence_ramp_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_sequence_ramp_example.h; sourceTree = "<group>"; };
+		9BE4E76B16D6908B002E107E /* FSOneShotTriggerModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSOneShotTriggerModule.cpp; sourceTree = "<group>"; };
+		9BE4E76C16D6908B002E107E /* FSOneShotTriggerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSOneShotTriggerModule.h; sourceTree = "<group>"; };
+		9BE4E76E16D69295002E107E /* FSMultiplierModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSMultiplierModule.cpp; sourceTree = "<group>"; };
+		9BE4E76F16D69295002E107E /* FSMultiplierModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMultiplierModule.h; sourceTree = "<group>"; };
 		9BFDE39A16D53E2C00E8D4EF /* FSSpawnFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSpawnFactory.cpp; sourceTree = "<group>"; };
 		9BFDE39B16D53E2C00E8D4EF /* FSSpawnFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSpawnFactory.h; sourceTree = "<group>"; };
 		9BFDE39D16D53E4A00E8D4EF /* FSSpawnModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSpawnModule.cpp; sourceTree = "<group>"; };
@@ -243,6 +249,10 @@
 				9B83FFC216D180C000BAA0C2 /* FSSoundFileModule.cpp */,
 				9BB7570216D5223200323F54 /* FSMoogFilterModule.h */,
 				9BB7570116D5223200323F54 /* FSMoogFilterModule.cpp */,
+				9BE4E76C16D6908B002E107E /* FSOneShotTriggerModule.h */,
+				9BE4E76B16D6908B002E107E /* FSOneShotTriggerModule.cpp */,
+				9BE4E76F16D69295002E107E /* FSMultiplierModule.h */,
+				9BE4E76E16D69295002E107E /* FSMultiplierModule.cpp */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -356,6 +366,8 @@
 				9BFDE39C16D53E2C00E8D4EF /* FSSpawnFactory.cpp in Sources */,
 				9BFDE39F16D53E4A00E8D4EF /* FSSpawnModule.cpp in Sources */,
 				9BFDE3A216D55DE600E8D4EF /* spawnfactory_example1.cpp in Sources */,
+				9BE4E76D16D6908B002E107E /* FSOneShotTriggerModule.cpp in Sources */,
+				9BE4E77016D69295002E107E /* FSMultiplierModule.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
