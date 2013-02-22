@@ -19,8 +19,9 @@ public:
     // generate 32bit linear pcm wav file
     static void generateSoundFile(const char *path, FSModule *module, double durationInSeconds);
     
-    // wrap
-    static double wrapSample(double sample, double low, bool lowInclusive, double high, bool highInclusive);
+    // wrap and clip
+    static double wrap(double sample, double low, bool lowInclusive, double high, bool highInclusive);
+    static double clip(double input, double low, double high);
     
     // input should be 0 -- 1
     static double tableLookup(double input, double *table, int tableLength);

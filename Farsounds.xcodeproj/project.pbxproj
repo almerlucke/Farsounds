@@ -18,6 +18,8 @@
 		9B216EF016D81C3900C132D2 /* FSDCSineModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B216EEE16D81C3900C132D2 /* FSDCSineModule.cpp */; };
 		9B216EF316D81CCC00C132D2 /* FSDCTriangleModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B216EF116D81CCC00C132D2 /* FSDCTriangleModule.cpp */; };
 		9B216EF616D81D4300C132D2 /* FSDCSquareModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B216EF416D81D4200C132D2 /* FSDCSquareModule.cpp */; };
+		9B216EF916D81F6F00C132D2 /* FSWaveModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B216EF716D81F6F00C132D2 /* FSWaveModule.cpp */; };
+		9B216EFC16D820DC00C132D2 /* FSTableModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B216EFA16D820DC00C132D2 /* FSTableModule.cpp */; };
 		9B23912516CC2650001C49E5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B23912416CC2650001C49E5 /* main.cpp */; };
 		9B23912716CC2650001C49E5 /* Farsounds.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B23912616CC2650001C49E5 /* Farsounds.1 */; };
 		9B642A5616D80FFF0002F2AE /* spawnfactory_example2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B642A5416D80FFF0002F2AE /* spawnfactory_example2.cpp */; };
@@ -89,6 +91,10 @@
 		9B216EF216D81CCC00C132D2 /* FSDCTriangleModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDCTriangleModule.h; sourceTree = "<group>"; };
 		9B216EF416D81D4200C132D2 /* FSDCSquareModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSDCSquareModule.cpp; sourceTree = "<group>"; };
 		9B216EF516D81D4200C132D2 /* FSDCSquareModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDCSquareModule.h; sourceTree = "<group>"; };
+		9B216EF716D81F6F00C132D2 /* FSWaveModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSWaveModule.cpp; sourceTree = "<group>"; };
+		9B216EF816D81F6F00C132D2 /* FSWaveModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSWaveModule.h; sourceTree = "<group>"; };
+		9B216EFA16D820DC00C132D2 /* FSTableModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSTableModule.cpp; sourceTree = "<group>"; };
+		9B216EFB16D820DC00C132D2 /* FSTableModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTableModule.h; sourceTree = "<group>"; };
 		9B23912116CC2650001C49E5 /* Farsounds */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Farsounds; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B23912416CC2650001C49E5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9B23912616CC2650001C49E5 /* Farsounds.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Farsounds.1; sourceTree = "<group>"; };
@@ -258,6 +264,10 @@
 				9B216EEB16D81B0800C132D2 /* FSSquareModule.cpp */,
 				9B216EF516D81D4200C132D2 /* FSDCSquareModule.h */,
 				9B216EF416D81D4200C132D2 /* FSDCSquareModule.cpp */,
+				9B216EF816D81F6F00C132D2 /* FSWaveModule.h */,
+				9B216EF716D81F6F00C132D2 /* FSWaveModule.cpp */,
+				9B216EFB16D820DC00C132D2 /* FSTableModule.h */,
+				9B216EFA16D820DC00C132D2 /* FSTableModule.cpp */,
 				9B97FA5216CE608F00B029F9 /* FSScalerModule.h */,
 				9B97FA5116CE608F00B029F9 /* FSScalerModule.cpp */,
 				9B97FA5516CE623A00B029F9 /* FSTriggerModule.h */,
@@ -410,6 +420,8 @@
 				9B216EF016D81C3900C132D2 /* FSDCSineModule.cpp in Sources */,
 				9B216EF316D81CCC00C132D2 /* FSDCTriangleModule.cpp in Sources */,
 				9B216EF616D81D4300C132D2 /* FSDCSquareModule.cpp in Sources */,
+				9B216EF916D81F6F00C132D2 /* FSWaveModule.cpp in Sources */,
+				9B216EFC16D820DC00C132D2 /* FSTableModule.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +488,8 @@
 		9B23912B16CC2650001C49E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_UNROLL_LOOPS = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,6 +499,7 @@
 		9B23912C16CC2650001C49E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_UNROLL_LOOPS = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";

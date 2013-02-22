@@ -60,7 +60,7 @@ void FSUtils::generateSoundFile(const char *path, FSModule *module, double durat
 }
 
 #pragma mark - Others
-double FSUtils::wrapSample(double sample, double low, bool lowInclusive, double high, bool highInclusive)
+double FSUtils::wrap(double sample, double low, bool lowInclusive, double high, bool highInclusive)
 {
     double range = 0.0;
     
@@ -85,6 +85,20 @@ double FSUtils::wrapSample(double sample, double low, bool lowInclusive, double 
     }
     
     return sample;
+}
+
+double FSUtils::clip(double input, double low, double high)
+{
+    if (high < low) {
+        double t = high;
+        high = low;
+        low = t;
+    }
+    
+    if (input < low) input = low;
+    if (input > high) input = high;
+    
+    return input;
 }
 
 void FSUtils::equalPowerPanMono(double input, double azimuth, double *left, double *right)

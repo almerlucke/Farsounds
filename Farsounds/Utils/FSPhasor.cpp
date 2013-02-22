@@ -18,9 +18,9 @@ double FSPhasor::generate(double frequency, double phaseOffset, bool sync)
         _previousSample = 0.0;
     }
     
-    double sample = FSUtils::wrapSample(_previousSample + phaseOffset, 0.0, false, 1.0, true);
+    double sample = FSUtils::wrap(_previousSample + phaseOffset, 0.0, false, 1.0, true);
     
-    _previousSample = FSUtils::wrapSample(_previousSample + phaseIncrement, 0.0, false, 1.0, true);
+    _previousSample = FSUtils::wrap(_previousSample + phaseIncrement, 0.0, false, 1.0, true);
     
     return sample;
 }
