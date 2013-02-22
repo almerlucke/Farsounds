@@ -12,6 +12,12 @@
 		9B1F6E1316CEDBED00556320 /* FSTimedTriggerModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F6E1116CEDBED00556320 /* FSTimedTriggerModule.cpp */; };
 		9B1F6E1616CEE45B00556320 /* FSSequenceModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F6E1416CEE45A00556320 /* FSSequenceModule.cpp */; };
 		9B1F6E1916CF02DA00556320 /* timed_sequence_example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F6E1716CF02DA00556320 /* timed_sequence_example.cpp */; };
+		9B216EE716D8185C00C132D2 /* FSSawModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B216EE516D8185C00C132D2 /* FSSawModule.cpp */; };
+		9B216EEA16D818FE00C132D2 /* FSTriangleModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B216EE816D818FE00C132D2 /* FSTriangleModule.cpp */; };
+		9B216EED16D81B0800C132D2 /* FSSquareModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B216EEB16D81B0800C132D2 /* FSSquareModule.cpp */; };
+		9B216EF016D81C3900C132D2 /* FSDCSineModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B216EEE16D81C3900C132D2 /* FSDCSineModule.cpp */; };
+		9B216EF316D81CCC00C132D2 /* FSDCTriangleModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B216EF116D81CCC00C132D2 /* FSDCTriangleModule.cpp */; };
+		9B216EF616D81D4300C132D2 /* FSDCSquareModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B216EF416D81D4200C132D2 /* FSDCSquareModule.cpp */; };
 		9B23912516CC2650001C49E5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B23912416CC2650001C49E5 /* main.cpp */; };
 		9B23912716CC2650001C49E5 /* Farsounds.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B23912616CC2650001C49E5 /* Farsounds.1 */; };
 		9B642A5616D80FFF0002F2AE /* spawnfactory_example2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B642A5416D80FFF0002F2AE /* spawnfactory_example2.cpp */; };
@@ -71,6 +77,18 @@
 		9B1F6E1516CEE45A00556320 /* FSSequenceModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSequenceModule.h; sourceTree = "<group>"; };
 		9B1F6E1716CF02DA00556320 /* timed_sequence_example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timed_sequence_example.cpp; sourceTree = "<group>"; };
 		9B1F6E1816CF02DA00556320 /* timed_sequence_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timed_sequence_example.h; sourceTree = "<group>"; };
+		9B216EE516D8185C00C132D2 /* FSSawModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSawModule.cpp; sourceTree = "<group>"; };
+		9B216EE616D8185C00C132D2 /* FSSawModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSawModule.h; sourceTree = "<group>"; };
+		9B216EE816D818FE00C132D2 /* FSTriangleModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSTriangleModule.cpp; sourceTree = "<group>"; };
+		9B216EE916D818FE00C132D2 /* FSTriangleModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTriangleModule.h; sourceTree = "<group>"; };
+		9B216EEB16D81B0800C132D2 /* FSSquareModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSquareModule.cpp; sourceTree = "<group>"; };
+		9B216EEC16D81B0800C132D2 /* FSSquareModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSquareModule.h; sourceTree = "<group>"; };
+		9B216EEE16D81C3900C132D2 /* FSDCSineModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSDCSineModule.cpp; sourceTree = "<group>"; };
+		9B216EEF16D81C3900C132D2 /* FSDCSineModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDCSineModule.h; sourceTree = "<group>"; };
+		9B216EF116D81CCC00C132D2 /* FSDCTriangleModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSDCTriangleModule.cpp; sourceTree = "<group>"; };
+		9B216EF216D81CCC00C132D2 /* FSDCTriangleModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDCTriangleModule.h; sourceTree = "<group>"; };
+		9B216EF416D81D4200C132D2 /* FSDCSquareModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSDCSquareModule.cpp; sourceTree = "<group>"; };
+		9B216EF516D81D4200C132D2 /* FSDCSquareModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDCSquareModule.h; sourceTree = "<group>"; };
 		9B23912116CC2650001C49E5 /* Farsounds */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Farsounds; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B23912416CC2650001C49E5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9B23912616CC2650001C49E5 /* Farsounds.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Farsounds.1; sourceTree = "<group>"; };
@@ -226,8 +244,20 @@
 			children = (
 				9B97FA4616CE359B00B029F9 /* FSPhasorModule.h */,
 				9B97FA4516CE359B00B029F9 /* FSPhasorModule.cpp */,
+				9B216EE616D8185C00C132D2 /* FSSawModule.h */,
+				9B216EE516D8185C00C132D2 /* FSSawModule.cpp */,
 				9B97FA4C16CE3B2500B029F9 /* FSSineModule.h */,
 				9B97FA4B16CE3B2500B029F9 /* FSSineModule.cpp */,
+				9B216EEF16D81C3900C132D2 /* FSDCSineModule.h */,
+				9B216EEE16D81C3900C132D2 /* FSDCSineModule.cpp */,
+				9B216EE916D818FE00C132D2 /* FSTriangleModule.h */,
+				9B216EE816D818FE00C132D2 /* FSTriangleModule.cpp */,
+				9B216EF216D81CCC00C132D2 /* FSDCTriangleModule.h */,
+				9B216EF116D81CCC00C132D2 /* FSDCTriangleModule.cpp */,
+				9B216EEC16D81B0800C132D2 /* FSSquareModule.h */,
+				9B216EEB16D81B0800C132D2 /* FSSquareModule.cpp */,
+				9B216EF516D81D4200C132D2 /* FSDCSquareModule.h */,
+				9B216EF416D81D4200C132D2 /* FSDCSquareModule.cpp */,
 				9B97FA5216CE608F00B029F9 /* FSScalerModule.h */,
 				9B97FA5116CE608F00B029F9 /* FSScalerModule.cpp */,
 				9B97FA5516CE623A00B029F9 /* FSTriggerModule.h */,
@@ -374,6 +404,12 @@
 				9BE4E76D16D6908B002E107E /* FSOneShotTriggerModule.cpp in Sources */,
 				9BE4E77016D69295002E107E /* FSMultiplierModule.cpp in Sources */,
 				9B642A5616D80FFF0002F2AE /* spawnfactory_example2.cpp in Sources */,
+				9B216EE716D8185C00C132D2 /* FSSawModule.cpp in Sources */,
+				9B216EEA16D818FE00C132D2 /* FSTriangleModule.cpp in Sources */,
+				9B216EED16D81B0800C132D2 /* FSSquareModule.cpp in Sources */,
+				9B216EF016D81C3900C132D2 /* FSDCSineModule.cpp in Sources */,
+				9B216EF316D81CCC00C132D2 /* FSDCTriangleModule.cpp in Sources */,
+				9B216EF616D81D4300C132D2 /* FSDCSquareModule.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

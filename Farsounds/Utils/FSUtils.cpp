@@ -15,6 +15,8 @@
 #include <cstdlib>
 #include <ctime>
 
+
+
 #pragma mark - Generate Soundfile
 void FSUtils::generateSoundFile(const char *path, FSModule *module, double durationInSeconds)
 {
@@ -96,9 +98,10 @@ double FSUtils::tableLookup(double input, double *table, int tableLength)
 {
     double xf = input * (tableLength - 1);
     int xi1 = xf;
+    int xi2 = (xi1 < (tableLength - 1))? xi1 + 1 : xi1;
     double fraction = xf - xi1;
     
-    return table[xi1] * (1.0 - fraction) + table[xi1 + 1] * fraction;
+    return table[xi1] * (1.0 - fraction) + table[xi2] * fraction;
 }
 
 #pragma mark - Random
@@ -123,4 +126,85 @@ double FSUtils::randRange(double low, double high)
 double FSUtils::mtof(int note)
 {
     return pow(2, (note - 69.0) / 12.0) * 440;
+}
+
+
+#pragma mark - Window Functions
+
+double FSUtils::modZeroBessel(double x)
+{
+    int i;
+    double x_2 = x / 2;
+    double num = 1;
+    double fact = 1;
+    double result = 1;
+    
+    for (i = 1; i < 20; i++) {
+        num *= x_2 * x_2;
+        fact *= i;
+        result += num / (fact * fact);
+    }
+    
+    return result;
+}
+
+void FSUtils::bartlettWindow(double *window, int windowLength)
+{
+    int m = windowLength - 1;
+	int halfLength = windowLength / 2;
+    
+    for (int n = 0; n <= halfLength; n++) {
+        double tmp = (double)n - (double)m / 2;
+        double val = 1.0 - (2.0 * fabs(tmp)) / m;
+        window[n] = val;
+        window[windowLength - n - 1] = val;
+    }
+}
+
+void FSUtils::hanningWindow(double *window, int windowLength)
+{
+    int m = windowLength - 1;
+	int halfLength = windowLength / 2;
+    
+    for (int n = 0; n <= halfLength; n++) {
+        double val = 0.5 - 0.5 * cos(2.0 * M_PI * n / m);
+        window[n] = val;
+        window[windowLength - n - 1] = val;
+    }
+}
+
+void FSUtils::hammingWindow(double *window, int windowLength)
+{
+    int m = windowLength - 1;
+	int halfLength = windowLength / 2;
+    
+    for (int n = 0; n <= halfLength; n++) {
+        double val = 0.54 - 0.46 * cos(2.0 * M_PI * n / m);
+        window[n] = val;
+        window[windowLength - n - 1] = val;
+    }
+}
+
+void FSUtils::blackmanWindow(double *window, int windowLength)
+{
+    int m = windowLength - 1;
+	int halfLength = windowLength / 2;
+    
+    for (int n = 0; n <= halfLength; n++) {
+        double val = 0.42 - 0.5 * cos(2.0 * M_PI * n / m) + 0.08 * cos(4.0 * M_PI * n / m);
+        window[n] = val;
+        window[windowLength - n - 1] = val;
+    }
+}
+
+void FSUtils::kaiserWindow(double *window, int windowLength, double beta)
+{
+    double m_2 = (double)(windowLength - 1) / 2.0;
+    double denom = modZeroBessel(beta);
+    
+    for (int n = 0; n < windowLength; n++) {
+        double val = (n - m_2) / m_2;
+        val = 1 - (val * val);
+        window[n] = modZeroBessel(beta * sqrt(val)) / denom;
+    }
 }

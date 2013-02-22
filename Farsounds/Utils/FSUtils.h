@@ -12,8 +12,14 @@
 class FSModule;
 
 class FSUtils {
+private:
+    static double modZeroBessel(double x);
+    
 public:
+    // generate 32bit linear pcm wav file
     static void generateSoundFile(const char *path, FSModule *module, double durationInSeconds);
+    
+    // wrap
     static double wrapSample(double sample, double low, bool lowInclusive, double high, bool highInclusive);
     
     // input should be 0 -- 1
@@ -28,6 +34,13 @@ public:
     
     // midi note to frequency (A4 - 69 is base)
     static double mtof(int note);
+    
+    // windowing functions
+    static void bartlettWindow(double *window, int windowLength);
+    static void hanningWindow(double *window, int windowLength);
+    static void hammingWindow(double *window, int windowLength);
+    static void blackmanWindow(double *window, int windowLength);
+    static void kaiserWindow(double *window, int windowLength, double beta);
 };
 
 #endif /* defined(__Farsounds__FSUtils__) */
