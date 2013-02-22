@@ -14,6 +14,7 @@
 		9B1F6E1916CF02DA00556320 /* timed_sequence_example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F6E1716CF02DA00556320 /* timed_sequence_example.cpp */; };
 		9B23912516CC2650001C49E5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B23912416CC2650001C49E5 /* main.cpp */; };
 		9B23912716CC2650001C49E5 /* Farsounds.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B23912616CC2650001C49E5 /* Farsounds.1 */; };
+		9B642A5616D80FFF0002F2AE /* spawnfactory_example2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B642A5416D80FFF0002F2AE /* spawnfactory_example2.cpp */; };
 		9B83FFC116D17C3200BAA0C2 /* FSSoundFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B83FFBF16D17C3200BAA0C2 /* FSSoundFile.cpp */; };
 		9B83FFC416D180C000BAA0C2 /* FSSoundFileModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B83FFC216D180C000BAA0C2 /* FSSoundFileModule.cpp */; };
 		9B97FA3216CE2E6E00B029F9 /* FSModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B97FA2816CE2E6E00B029F9 /* FSModule.cpp */; };
@@ -73,6 +74,8 @@
 		9B23912116CC2650001C49E5 /* Farsounds */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Farsounds; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B23912416CC2650001C49E5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9B23912616CC2650001C49E5 /* Farsounds.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Farsounds.1; sourceTree = "<group>"; };
+		9B642A5416D80FFF0002F2AE /* spawnfactory_example2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = spawnfactory_example2.cpp; sourceTree = "<group>"; };
+		9B642A5516D80FFF0002F2AE /* spawnfactory_example2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spawnfactory_example2.h; sourceTree = "<group>"; };
 		9B83FFBF16D17C3200BAA0C2 /* FSSoundFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSoundFile.cpp; sourceTree = "<group>"; };
 		9B83FFC016D17C3200BAA0C2 /* FSSoundFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSoundFile.h; sourceTree = "<group>"; };
 		9B83FFC216D180C000BAA0C2 /* FSSoundFileModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSoundFileModule.cpp; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 				9BB7570416D5340A00323F54 /* time_sequence_ramp_example.cpp */,
 				9BFDE3A116D55DE600E8D4EF /* spawnfactory_example1.h */,
 				9BFDE3A016D55DE600E8D4EF /* spawnfactory_example1.cpp */,
+				9B642A5516D80FFF0002F2AE /* spawnfactory_example2.h */,
+				9B642A5416D80FFF0002F2AE /* spawnfactory_example2.cpp */,
 			);
 			path = Patches;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 				9BFDE3A216D55DE600E8D4EF /* spawnfactory_example1.cpp in Sources */,
 				9BE4E76D16D6908B002E107E /* FSOneShotTriggerModule.cpp in Sources */,
 				9BE4E77016D69295002E107E /* FSMultiplierModule.cpp in Sources */,
+				9B642A5616D80FFF0002F2AE /* spawnfactory_example2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
