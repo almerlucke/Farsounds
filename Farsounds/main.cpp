@@ -10,24 +10,12 @@
 #include "FSEnvironment.h"
 #include "FSUtils.h"
 #include "FSPatch.h"
-#include "FSSpawnFactory.h"
-#include "FSSpawnModule.h"
-
 #include "FSSineModule.h"
 #include "FSADSREnvelopeModule.h"
-#include "FSScalerModule.h"
-#include "FSPanningModule.h"
 #include "FSTimedTriggerModule.h"
-#include "FSOneShotTriggerModule.h"
 #include "FSMultiplierModule.h"
 #include "FSAllpassModule.h"
-#include "FSTriangleModule.h"
-#include "FSSquareModule.h"
-#include "FSRampModule.h"
-#include "FSTableModule.h"
 #include "FSSequenceModule.h"
-#include "FSSoundFile.h"
-#include "FSSoundFileModule.h"
 
 
 class DX7Operator
@@ -408,30 +396,32 @@ int main(int argc, const char * argv[])
 {
     FSUtils::seedRand();
 
-    double times[5] = {0.6, 0.6, 0.1, 0.1, -0.6};
+    double times[8] = {0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, -0.4};
     double frequencies[12] = {
-        FSUtils::mtof(36), FSUtils::mtof(41), FSUtils::mtof(45),
+        FSUtils::mtof(36), FSUtils::mtof(53), FSUtils::mtof(69),
         FSUtils::mtof(48), FSUtils::mtof(41), FSUtils::mtof(45),
-        FSUtils::mtof(60), FSUtils::mtof(62), FSUtils::mtof(64),
-        FSUtils::mtof(60), FSUtils::mtof(64), FSUtils::mtof(65)};
+        FSUtils::mtof(84), FSUtils::mtof(83), FSUtils::mtof(79),
+        FSUtils::mtof(60), FSUtils::mtof(72), FSUtils::mtof(71)};
     double amps1[5] = {1.0, 0.6, 0.4, 0.6, 0.7};
     
-    double times2[8] = {0.2, 0.2, 0.2, 0.4, 0.2, 0.1, 0.1, -2.6};
-    double frequencies2[4] = {
-        FSUtils::mtof(60), FSUtils::mtof(62), FSUtils::mtof(64), FSUtils::mtof(65)};
+    double times2[9] = {0.6, 0.6, 0.1, 0.1, -0.6, 1.2, 0.1, 0.1, -0.6};
+    double frequencies2[12] = {
+        FSUtils::mtof(60), FSUtils::mtof(62), FSUtils::mtof(64), FSUtils::mtof(65),
+        FSUtils::mtof(72), FSUtils::mtof(74), FSUtils::mtof(77), FSUtils::mtof(76),
+        FSUtils::mtof(96), FSUtils::mtof(98), FSUtils::mtof(96), FSUtils::mtof(101)};
     double amps2[5] = {1.0, 0.6, 0.4, 0.6, 0.7};
     
     FSPatch *mainPatch = new FSPatch(0, 1);
-    FSTimedTriggerModule *trigger1 = new FSTimedTriggerModule(times, 5, 0, true);
+    FSTimedTriggerModule *trigger1 = new FSTimedTriggerModule(times, 8, 0, true);
     FSSequenceModule *sequencer1 = new FSSequenceModule(frequencies, 12);
     FSSequenceModule *ampSequencer1 = new FSSequenceModule(amps1, 5);
-    FSTimedTriggerModule *trigger2 = new FSTimedTriggerModule(times2, 8, 0, true);
-    FSSequenceModule *sequencer2 = new FSSequenceModule(frequencies2, 4);
+    FSTimedTriggerModule *trigger2 = new FSTimedTriggerModule(times2, 9, 0, true);
+    FSSequenceModule *sequencer2 = new FSSequenceModule(frequencies2, 12);
     FSSequenceModule *ampSequencer2 = new FSSequenceModule(amps2, 5);
     FSMultiplierModule *amp1 = new FSMultiplierModule(2);
     FSMultiplierModule *amp2 = new FSMultiplierModule(2);
-    FSAllpassModule *allpass1 = new FSAllpassModule(FSEnvironment::sampleRate * 0.3, 0.1);
-    FSAllpassModule *allpass2 = new FSAllpassModule(FSEnvironment::sampleRate * 0.3, 0.6);
+    FSAllpassModule *allpass1 = new FSAllpassModule(FSEnvironment::sampleRate * 0.4, 0.5);
+    FSAllpassModule *allpass2 = new FSAllpassModule(FSEnvironment::sampleRate * 0.6, 0.6);
 
     DX7 *dx7 = new DX7(settings1(), mainPatch);
     dx7->connectTrigger(trigger1, 0);
