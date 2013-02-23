@@ -408,21 +408,21 @@ int main(int argc, const char * argv[])
 {
     FSUtils::seedRand();
 
-    double times[10] = {0.6, 0.6, 0.1, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7};
+    double times[5] = {0.6, 0.6, 0.1, 0.1, -0.6};
     double frequencies[12] = {
-        FSUtils::mtof(36), FSUtils::mtof(41), FSUtils::mtof(46),
-        FSUtils::mtof(51), FSUtils::mtof(56), FSUtils::mtof(61),
-        FSUtils::mtof(40), FSUtils::mtof(45), FSUtils::mtof(50),
-        FSUtils::mtof(55), FSUtils::mtof(60), FSUtils::mtof(65)};
+        FSUtils::mtof(36), FSUtils::mtof(41), FSUtils::mtof(45),
+        FSUtils::mtof(48), FSUtils::mtof(41), FSUtils::mtof(45),
+        FSUtils::mtof(60), FSUtils::mtof(62), FSUtils::mtof(64),
+        FSUtils::mtof(60), FSUtils::mtof(64), FSUtils::mtof(65)};
     double amps1[5] = {1.0, 0.6, 0.4, 0.6, 0.7};
     
-    double times2[8] = {0.2, 0.2, 0.2, 0.4, 0.1, 0.1, 0.1, -2.0};
+    double times2[8] = {0.2, 0.2, 0.2, 0.4, 0.2, 0.1, 0.1, -2.6};
     double frequencies2[4] = {
         FSUtils::mtof(60), FSUtils::mtof(62), FSUtils::mtof(64), FSUtils::mtof(65)};
     double amps2[5] = {1.0, 0.6, 0.4, 0.6, 0.7};
     
     FSPatch *mainPatch = new FSPatch(0, 1);
-    FSTimedTriggerModule *trigger1 = new FSTimedTriggerModule(times, 10, 0, true);
+    FSTimedTriggerModule *trigger1 = new FSTimedTriggerModule(times, 5, 0, true);
     FSSequenceModule *sequencer1 = new FSSequenceModule(frequencies, 12);
     FSSequenceModule *ampSequencer1 = new FSSequenceModule(amps1, 5);
     FSTimedTriggerModule *trigger2 = new FSTimedTriggerModule(times2, 8, 0, true);
