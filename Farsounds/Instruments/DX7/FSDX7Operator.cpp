@@ -11,7 +11,16 @@
 
 FSDX7Operator::FSDX7Operator(FSDX7OperatorSettings settings, FSPatch *patch)
 {
-    osc = new FSSineModule();
+    if (settings.wave == FSDX7OperatorWaveSine) {
+        osc = new FSSineModule();
+    } else if (settings.wave == FSDX7OperatorWaveTri) {
+        osc = new FSTriangleModule();
+    } else if (settings.wave == FSDX7OperatorWaveSaw) {
+        osc = new FSSawModule();
+    } else if (settings.wave == FSDX7OperatorWaveSquare) {
+        osc = new FSSquareModule();
+    }
+    
     adsr = new FSADSREnvelopeModule();
     feedback = new FSMultiplierModule(settings.feedbackLevel);
     amp = new FSMultiplierModule(settings.velocityLevel, 2);

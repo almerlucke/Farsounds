@@ -37,6 +37,7 @@ FSDX7Settings settings1()
     dx7Settings.setDecayTime(0.1, 0.2, 0.02, 0.01, 0.01, 0.01);
     dx7Settings.setSustainTime(0.01, 0.01, 0.01, 0.01, 0.01, 0.01);
     dx7Settings.setReleaseShape(3, 3, 3, 3, 3, 3);
+    dx7Settings.setWave(FSDX7OperatorWaveSine);
         
     return dx7Settings;
 }
@@ -57,6 +58,7 @@ FSDX7Settings settings2()
     dx7Settings.setDecayTime(0.01, 0.02, 0.02, 0.01, 0.01, 0.01);
     dx7Settings.setSustainTime(0.1, 0.1, 0.1, 0.1, 0.1, 0.1);
     dx7Settings.setReleaseShape(1, 1, 1, 1, 1, 1);
+    dx7Settings.setWave(FSDX7OperatorWaveSine);
     
     return dx7Settings;
 }
@@ -77,6 +79,7 @@ FSDX7Settings settings3()
     dx7Settings.setDecayTime(0.01, 0.01, 0.01, 0.01, 0.02, 0.02);
     dx7Settings.setSustainTime(0.01, 0.02, 0.02, 0.02, 0.02, 0.02);
     dx7Settings.setReleaseShape(1, 1, 1, 1, 1, 1);
+    dx7Settings.setWave(FSDX7OperatorWaveSine);
     
     return dx7Settings;
 }

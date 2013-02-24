@@ -11,8 +11,18 @@
 
 #include "FSPatch.h"
 #include "FSSineModule.h"
+#include "FSTriangleModule.h"
+#include "FSSawModule.h"
+#include "FSSquareModule.h"
 #include "FSADSREnvelopeModule.h"
 #include "FSMultiplierModule.h"
+
+enum FSDX7OperatorWave {
+    FSDX7OperatorWaveSine = 1,
+    FSDX7OperatorWaveTri = 2,
+    FSDX7OperatorWaveSaw = 3,
+    FSDX7OperatorWaveSquare = 4
+};
 
 struct FSDX7OperatorSettings
 {
@@ -33,12 +43,13 @@ struct FSDX7OperatorSettings
     double decayTimePercentage;
     double sustainTimePercentage;
     double releaseShape;
+    FSDX7OperatorWave wave;
 };
 
 class FSDX7Operator
 {
 public:
-    FSSineModule *osc;
+    FSModule *osc;
     FSADSREnvelopeModule *adsr;
     FSMultiplierModule *feedback;
     FSMultiplierModule *amp;

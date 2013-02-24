@@ -11,9 +11,44 @@
 
 #include "FSDX7Operator.h"
 
+enum FSDX7Algorithm {
+    FSDX7_NO_ALGORITHM = 0,
+    FSDX7_ALGORITHM1 = 1,
+    FSDX7_ALGORITHM2 = 2,
+    FSDX7_ALGORITHM3 = 3,
+    FSDX7_ALGORITHM4 = 4,
+    FSDX7_ALGORITHM5 = 5,
+    FSDX7_ALGORITHM6 = 6,
+    FSDX7_ALGORITHM7 = 7,
+    FSDX7_ALGORITHM8 = 8,
+    FSDX7_ALGORITHM9 = 9,
+    FSDX7_ALGORITHM10 = 10,
+    FSDX7_ALGORITHM11 = 11,
+    FSDX7_ALGORITHM12 = 12,
+    FSDX7_ALGORITHM13 = 13,
+    FSDX7_ALGORITHM14 = 14,
+    FSDX7_ALGORITHM15 = 15,
+    FSDX7_ALGORITHM16 = 16,
+    FSDX7_ALGORITHM17 = 17,
+    FSDX7_ALGORITHM18 = 18,
+    FSDX7_ALGORITHM19 = 19,
+    FSDX7_ALGORITHM20 = 20,
+    FSDX7_ALGORITHM21 = 21,
+    FSDX7_ALGORITHM22 = 22,
+    FSDX7_ALGORITHM23 = 23,
+    FSDX7_ALGORITHM24 = 24,
+    FSDX7_ALGORITHM25 = 25,
+    FSDX7_ALGORITHM26 = 26,
+    FSDX7_ALGORITHM27 = 27,
+    FSDX7_ALGORITHM28 = 28,
+    FSDX7_ALGORITHM29 = 29,
+    FSDX7_ALGORITHM30 = 30,
+    FSDX7_ALGORITHM31 = 31,
+    FSDX7_ALGORITHM32 = 32
+};
+
 struct FSDX7Settings
 {
-    
     FSDX7OperatorSettings operatorSettings[6];
     
     void setPitchScale(double op1, double op2, double op3, double op4, double op5, double op6)
@@ -135,6 +170,26 @@ struct FSDX7Settings
         operatorSettings[4].releaseShape = op5;
         operatorSettings[5].releaseShape = op6;
     }
+    
+    void setWave(FSDX7OperatorWave wave)
+    {
+        operatorSettings[0].wave = wave;
+        operatorSettings[1].wave = wave;
+        operatorSettings[2].wave = wave;
+        operatorSettings[3].wave = wave;
+        operatorSettings[4].wave = wave;
+        operatorSettings[5].wave = wave;
+    }
+    
+    void setWave(FSDX7OperatorWave op1, FSDX7OperatorWave op2, FSDX7OperatorWave op3, FSDX7OperatorWave op4, FSDX7OperatorWave op5, FSDX7OperatorWave op6)
+    {
+        operatorSettings[0].wave = op1;
+        operatorSettings[1].wave = op2;
+        operatorSettings[2].wave = op3;
+        operatorSettings[3].wave = op4;
+        operatorSettings[4].wave = op5;
+        operatorSettings[5].wave = op6;
+    }
 };
 
 class FSDX7 {
@@ -151,6 +206,7 @@ public:
     FSDX7Operator *op6;
     
     FSDX7(FSDX7Settings settings, FSPatch *patch);
+    FSDX7(FSDX7Settings settings, FSDX7Algorithm algorithm, FSModule *output, int outputIndex, FSPatch *patch);
     ~FSDX7();
     
     void connectPitch(FSModule *pitch, int output);
