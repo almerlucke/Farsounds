@@ -49,6 +49,9 @@
 		9BB7570316D5223300323F54 /* FSMoogFilterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BB7570116D5223200323F54 /* FSMoogFilterModule.cpp */; };
 		9BB7570616D5340A00323F54 /* time_sequence_ramp_example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BB7570416D5340A00323F54 /* time_sequence_ramp_example.cpp */; };
 		9BDBF5F516D8F0D100940124 /* soundfile_granular_example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBF5F316D8F0D100940124 /* soundfile_granular_example.cpp */; };
+		9BDBF5FA16D929E800940124 /* FSDX7Operator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBF5F816D929E800940124 /* FSDX7Operator.cpp */; };
+		9BDBF5FD16D92B4300940124 /* FSDX7.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBF5FB16D92B4300940124 /* FSDX7.cpp */; };
+		9BDBF60016D9333F00940124 /* dx7_example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBF5FE16D9333F00940124 /* dx7_example.cpp */; };
 		9BE4E76D16D6908B002E107E /* FSOneShotTriggerModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4E76B16D6908B002E107E /* FSOneShotTriggerModule.cpp */; };
 		9BE4E77016D69295002E107E /* FSMultiplierModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4E76E16D69295002E107E /* FSMultiplierModule.cpp */; };
 		9BFDE39C16D53E2C00E8D4EF /* FSSpawnFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE39A16D53E2C00E8D4EF /* FSSpawnFactory.cpp */; };
@@ -153,6 +156,12 @@
 		9BB7570516D5340A00323F54 /* time_sequence_ramp_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_sequence_ramp_example.h; sourceTree = "<group>"; };
 		9BDBF5F316D8F0D100940124 /* soundfile_granular_example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = soundfile_granular_example.cpp; sourceTree = "<group>"; };
 		9BDBF5F416D8F0D100940124 /* soundfile_granular_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soundfile_granular_example.h; sourceTree = "<group>"; };
+		9BDBF5F816D929E800940124 /* FSDX7Operator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSDX7Operator.cpp; sourceTree = "<group>"; };
+		9BDBF5F916D929E800940124 /* FSDX7Operator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDX7Operator.h; sourceTree = "<group>"; };
+		9BDBF5FB16D92B4300940124 /* FSDX7.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSDX7.cpp; sourceTree = "<group>"; };
+		9BDBF5FC16D92B4300940124 /* FSDX7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDX7.h; sourceTree = "<group>"; };
+		9BDBF5FE16D9333F00940124 /* dx7_example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dx7_example.cpp; sourceTree = "<group>"; };
+		9BDBF5FF16D9333F00940124 /* dx7_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dx7_example.h; sourceTree = "<group>"; };
 		9BE4E76B16D6908B002E107E /* FSOneShotTriggerModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSOneShotTriggerModule.cpp; sourceTree = "<group>"; };
 		9BE4E76C16D6908B002E107E /* FSOneShotTriggerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSOneShotTriggerModule.h; sourceTree = "<group>"; };
 		9BE4E76E16D69295002E107E /* FSMultiplierModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSMultiplierModule.cpp; sourceTree = "<group>"; };
@@ -192,6 +201,8 @@
 				9B642A5416D80FFF0002F2AE /* spawnfactory_example2.cpp */,
 				9BDBF5F416D8F0D100940124 /* soundfile_granular_example.h */,
 				9BDBF5F316D8F0D100940124 /* soundfile_granular_example.cpp */,
+				9BDBF5FF16D9333F00940124 /* dx7_example.h */,
+				9BDBF5FE16D9333F00940124 /* dx7_example.cpp */,
 			);
 			path = Patches;
 			sourceTree = "<group>";
@@ -215,6 +226,7 @@
 		9B23912316CC2650001C49E5 /* Farsounds */ = {
 			isa = PBXGroup;
 			children = (
+				9BDBF5F616D9298200940124 /* Instruments */,
 				9B1F6E0D16CED9D400556320 /* Patches */,
 				9B97FA3B16CE312500B029F9 /* Utils */,
 				9B97FA3816CE2F7000B029F9 /* Libs */,
@@ -332,6 +344,25 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		9BDBF5F616D9298200940124 /* Instruments */ = {
+			isa = PBXGroup;
+			children = (
+				9BDBF5F716D929B600940124 /* DX7 */,
+			);
+			path = Instruments;
+			sourceTree = "<group>";
+		};
+		9BDBF5F716D929B600940124 /* DX7 */ = {
+			isa = PBXGroup;
+			children = (
+				9BDBF5F916D929E800940124 /* FSDX7Operator.h */,
+				9BDBF5F816D929E800940124 /* FSDX7Operator.cpp */,
+				9BDBF5FC16D92B4300940124 /* FSDX7.h */,
+				9BDBF5FB16D92B4300940124 /* FSDX7.cpp */,
+			);
+			path = DX7;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -428,6 +459,9 @@
 				9B216EF916D81F6F00C132D2 /* FSWaveModule.cpp in Sources */,
 				9B216EFC16D820DC00C132D2 /* FSTableModule.cpp in Sources */,
 				9BDBF5F516D8F0D100940124 /* soundfile_granular_example.cpp in Sources */,
+				9BDBF5FA16D929E800940124 /* FSDX7Operator.cpp in Sources */,
+				9BDBF5FD16D92B4300940124 /* FSDX7.cpp in Sources */,
+				9BDBF60016D9333F00940124 /* dx7_example.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

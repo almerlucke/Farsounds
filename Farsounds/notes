@@ -1,27 +1,15 @@
-multi voice:
-external parameters
-module factory for voices
-trigger voice with midi note: pitch, velocity, duration
+#1
+pitchScale=[1.1, 2.0, 
+velocityLevel=[0.3,
+feedbackLevel=0
+pitchIndependent=0
+attackLevel=1
+attackShape=1
+attackTime=0.01
+decayLevel=0.4
+decayShape=1
+decayTime=0.01
+sustainTime=0.1
+releaseShape=1
 
-
-
-class FSSpawnModuleFactory
-{
-    int numOutputsInModule;
-    FSModule *produce(double pitch, double amp, double duration) {
-        
-    }
-}
-
-class FSSpawnVoice
-{
-    uin64_t _duration;
-    FSModule *_module;
-    FSSpawnVoice *_prev;
-    FSSpawnVoice *_next;
-}
-
-class FSSpawnModule
-{
-    
-}
+#2
