@@ -18,6 +18,8 @@
 #include "FSRampModule.h"
 #include "FSDX7.h"
 
+#include "dx7_example.h"
+
 #include <iostream>
 
 FSDX7Settings tubularBells()
@@ -148,9 +150,10 @@ FSDX7Settings steelDrum()
     return dx7Settings;
 }
 
+
 int main(int argc, const char * argv[])
 {
-    
+    /*
     FSUtils::seedRand();
     
     double times[12] = {0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.4, 0.2, 0.1, 0.1, 0.1, 0.1};
@@ -201,6 +204,9 @@ int main(int argc, const char * argv[])
     
     delete dx7;
     delete mainPatch;
+     */
+    
+    dx7_example();
     
     return 0;
 }

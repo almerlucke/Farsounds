@@ -136,39 +136,25 @@ void dx7_example()
     FSPanningModule *pan2 = new FSPanningModule(0.0);
     FSPanningModule *pan3 = new FSPanningModule(0.2);
     
-    FSDX7 *dx7 = new FSDX7(settings1(), mainPatch);
+    FSDX7 *dx7 = new FSDX7(settings1(), FSDX7_ALGORITHM12, amp1, 0, mainPatch);
     dx7->connectTrigger(trigger1, 0);
     dx7->connectDuration(trigger1, 1);
     dx7->connectPitch(ramp1, 0);
-    dx7->op4->connectModulator(dx7->op1);
-    dx7->op4->connectModulator(dx7->op2);
-    dx7->op4->connectModulator(dx7->op3);
-    dx7->op6->connectModulator(dx7->op5);
     
-    FSDX7 *dx72 = new FSDX7(settings2(), mainPatch);
+    FSDX7 *dx72 = new FSDX7(settings2(), FSDX7_ALGORITHM1, amp2, 0, mainPatch);
     dx72->connectTrigger(trigger2, 0);
     dx72->connectDuration(trigger2, 1);
     dx72->connectPitch(ramp2, 0);
-    dx72->op2->connectModulator(dx72->op1);
-    dx72->op3->connectModulator(dx72->op2);
-    dx72->op4->connectModulator(dx72->op3);
-    dx72->op6->connectModulator(dx72->op5);
     
-    FSDX7 *dx73 = new FSDX7(settings3(), mainPatch);
+    FSDX7 *dx73 = new FSDX7(settings2(), FSDX7_ALGORITHM20, amp3, 0, mainPatch);
     dx73->connectTrigger(trigger3, 0);
     dx73->connectDuration(trigger3, 1);
     dx73->connectPitch(ramp3, 0);
-    dx73->op2->connectModulator(dx73->op1);
-    dx73->op3->connectModulator(dx73->op1);
-    dx73->op6->connectModulator(dx73->op4);
-    dx73->op6->connectModulator(dx73->op5);
     
     sequencer1->connect(trigger1, 0, 0);
     ramp1->connect(trigger1, 0, 0);
     ramp1->connect(sequencer1, 0, 2);
     ampSequencer1->connect(trigger1, 0, 0);
-    amp1->connect(dx7->op4->amp, 0, 0);
-    amp1->connect(dx7->op6->amp, 0, 0);
     amp1->connect(ampSequencer1, 0, 1);
     allpass1->connect(amp1, 0, 0);
     pan1->connect(allpass1, 0, 0);
@@ -184,8 +170,6 @@ void dx7_example()
     ramp2->connect(trigger2, 0, 0);
     ramp2->connect(sequencer2, 0, 2);
     ampSequencer2->connect(trigger2, 0, 0);
-    amp2->connect(dx72->op4->amp, 0, 0);
-    amp2->connect(dx72->op6->amp, 0, 0);
     amp2->connect(ampSequencer2, 0, 1);
     allpass2->connect(amp2, 0, 0);
     pan2->connect(allpass2, 0, 0);
@@ -201,9 +185,6 @@ void dx7_example()
     ramp3->connect(trigger3, 0, 0);
     ramp3->connect(sequencer3, 0, 2);
     ampSequencer3->connect(trigger3, 0, 0);
-    amp3->connect(dx73->op2->amp, 0, 0);
-    amp3->connect(dx73->op3->amp, 0, 0);
-    amp3->connect(dx73->op6->amp, 0, 0);
     amp3->connect(ampSequencer3, 0, 1);
     allpass3->connect(amp3, 0, 0);
     pan3->connect(allpass3, 0, 0);
