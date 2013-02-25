@@ -22,20 +22,15 @@ FSDX7Operator::FSDX7Operator(FSDX7OperatorSettings settings, FSPatch *patch)
     }
     
     adsr = new FSADSREnvelopeModule();
-    feedback = new FSMultiplierModule(settings.feedbackLevel);
     amp = new FSMultiplierModule(settings.velocityLevel, 2);
     freq = new FSMultiplierModule(settings.pitchScale);
     
-    feedback->connect(osc, 0, 0);
-    // connect feedback to phase
-    osc->connect(feedback, 0, 1);
     amp->connect(osc, 0, 0);
     amp->connect(adsr, 0, 1);
     osc->connect(freq, 0, 0);
     
     patch->addModule(osc);
     patch->addModule(adsr);
-    patch->addModule(feedback);
     patch->addModule(amp);
     patch->addModule(freq);
     

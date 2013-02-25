@@ -27,8 +27,8 @@ FSDX7Settings settings1()
     
     dx7Settings.setPitchScale(3.51, 5.2, 3, 2.0, 4, 2.0);
     dx7Settings.setVelocityLevel(0.3, 0.2, 0.2, 0.3, 0.1, 0.3);
-    dx7Settings.setFeedbackLevel(0.0, 0, 0, 0, 0.25, 0);
-    dx7Settings.setPitchIndependent(false, false, false, false, false, false);
+    dx7Settings.setFeedbackLevel(0.25);
+    dx7Settings.setFixedPitch(false, false, false, false, false, false);
     dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackTime(0.01, 0.02, 0.03, 0.01, 0.01, 0.01);
@@ -48,8 +48,8 @@ FSDX7Settings settings2()
     
     dx7Settings.setPitchScale(4.0, 3.1, 2.0, 0.5, 5.5, 1.0);
     dx7Settings.setVelocityLevel(0.6, 0.3, 0.3, 0.3, 0.4, 0.3);
-    dx7Settings.setFeedbackLevel(0.3, 0, 0, 0, 0, 0);
-    dx7Settings.setPitchIndependent(false, false, false, false, false, false);
+    dx7Settings.setFeedbackLevel(0.3);
+    dx7Settings.setFixedPitch(false, false, false, false, false, false);
     dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackTime(0.01, 0.02, 0.03, 0.01, 0.01, 0.01);
@@ -69,8 +69,8 @@ FSDX7Settings settings3()
     
     dx7Settings.setPitchScale(12.1, 2.0, 4.01, 8.01, 4.0, 2.01);
     dx7Settings.setVelocityLevel(0.1, 0.3, 0.3, 0.2, 0.2, 0.3);
-    dx7Settings.setFeedbackLevel(0.15, 0, 0, 0, 0, 0);
-    dx7Settings.setPitchIndependent(false, false, false, false, false, false);
+    dx7Settings.setFeedbackLevel(0.15);
+    dx7Settings.setFixedPitch(false, false, false, false, false, false);
     dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackTime(0.01, 0.01, 0.01, 0.01, 0.02, 0.02);

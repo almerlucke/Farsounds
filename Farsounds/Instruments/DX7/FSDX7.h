@@ -50,6 +50,7 @@ enum FSDX7Algorithm {
 struct FSDX7Settings
 {
     FSDX7OperatorSettings operatorSettings[6];
+    double feedbackLevel;
     
     void setPitchScale(double op1, double op2, double op3, double op4, double op5, double op6)
     {
@@ -71,24 +72,19 @@ struct FSDX7Settings
         operatorSettings[5].velocityLevel = op6;
     }
     
-    void setFeedbackLevel(double op1, double op2, double op3, double op4, double op5, double op6)
+    void setFeedbackLevel(double fbLevel)
     {
-        operatorSettings[0].feedbackLevel = op1;
-        operatorSettings[1].feedbackLevel = op2;
-        operatorSettings[2].feedbackLevel = op3;
-        operatorSettings[3].feedbackLevel = op4;
-        operatorSettings[4].feedbackLevel = op5;
-        operatorSettings[5].feedbackLevel = op6;
+        feedbackLevel = fbLevel;
     }
     
-    void setPitchIndependent(bool op1, bool op2, bool op3, bool op4, bool op5, bool op6)
+    void setFixedPitch(bool op1, bool op2, bool op3, bool op4, bool op5, bool op6)
     {
-        operatorSettings[0].pitchIndependent = op1;
-        operatorSettings[1].pitchIndependent = op2;
-        operatorSettings[2].pitchIndependent = op3;
-        operatorSettings[3].pitchIndependent = op4;
-        operatorSettings[4].pitchIndependent = op5;
-        operatorSettings[5].pitchIndependent = op6;
+        operatorSettings[0].fixedPitch = op1;
+        operatorSettings[1].fixedPitch = op2;
+        operatorSettings[2].fixedPitch = op3;
+        operatorSettings[3].fixedPitch = op4;
+        operatorSettings[4].fixedPitch = op5;
+        operatorSettings[5].fixedPitch = op6;
     }
     
     void setAttackLevel(double op1, double op2, double op3, double op4, double op5, double op6)
@@ -204,6 +200,7 @@ public:
     FSDX7Operator *op4;
     FSDX7Operator *op5;
     FSDX7Operator *op6;
+    FSMultiplierModule *feedbackModule;
     
     FSDX7(FSDX7Settings settings, FSPatch *patch);
     FSDX7(FSDX7Settings settings, FSDX7Algorithm algorithm, FSModule *output, int outputIndex, FSPatch *patch);

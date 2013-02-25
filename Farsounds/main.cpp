@@ -26,8 +26,8 @@ FSDX7Settings tubularBells()
     
     dx7Settings.setPitchScale(1, 3.5, 1, 3.5, 323.6, 2);
     dx7Settings.setVelocityLevel(0.7, 0.3, 0.4, 0.4, 0.2, 0.2);
-    dx7Settings.setFeedbackLevel(0.0, 0, 0, 0, 0, 0.2);
-    dx7Settings.setPitchIndependent(false, false, false, false, true, false);
+    dx7Settings.setFeedbackLevel(0.2);
+    dx7Settings.setFixedPitch(false, false, false, false, true, false);
     dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackTime(0.01, 0.02, 0.03, 0.01, 0.01, 0.01);
@@ -36,7 +36,7 @@ FSDX7Settings tubularBells()
     dx7Settings.setDecayTime(0.01, 0.02, 0.02, 0.01, 0.01, 0.01);
     dx7Settings.setSustainTime(0.01, 0.01, 0.01, 0.01, 0.01, 0.01);
     dx7Settings.setReleaseShape(3, 3, 3, 3, 3, 3);
-    dx7Settings.setWave(FSDX7OperatorWaveSquare, FSDX7OperatorWaveSine, FSDX7OperatorWaveSine,
+    dx7Settings.setWave(FSDX7OperatorWaveSine, FSDX7OperatorWaveSine, FSDX7OperatorWaveSine,
                         FSDX7OperatorWaveSine, FSDX7OperatorWaveSine, FSDX7OperatorWaveSine);
     
     return dx7Settings;
@@ -48,8 +48,8 @@ FSDX7Settings tubularBells2()
     
     dx7Settings.setPitchScale(0.5, 3.5, 0.51, 3.5, 333.6, 2.01);
     dx7Settings.setVelocityLevel(0.7, 0.5, 0.4, 0.4, 0.2, 0.5);
-    dx7Settings.setFeedbackLevel(0.0, 0, 0, 0, 0, 0.2);
-    dx7Settings.setPitchIndependent(false, false, false, false, true, false);
+    dx7Settings.setFeedbackLevel(0.2);
+    dx7Settings.setFixedPitch(false, false, false, false, true, false);
     dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackTime(0.01, 0.02, 0.03, 0.01, 0.01, 0.01);
@@ -58,7 +58,7 @@ FSDX7Settings tubularBells2()
     dx7Settings.setDecayTime(0.01, 0.02, 0.02, 0.01, 0.01, 0.01);
     dx7Settings.setSustainTime(0.01, 0.01, 0.01, 0.01, 0.01, 0.01);
     dx7Settings.setReleaseShape(3, 3, 3, 3, 3, 3);
-    dx7Settings.setWave(FSDX7OperatorWaveSaw, FSDX7OperatorWaveSine, FSDX7OperatorWaveSine,
+    dx7Settings.setWave(FSDX7OperatorWaveSine, FSDX7OperatorWaveSine, FSDX7OperatorWaveSine,
                         FSDX7OperatorWaveSine, FSDX7OperatorWaveSine, FSDX7OperatorWaveSine);
     
     return dx7Settings;
@@ -70,8 +70,8 @@ FSDX7Settings pipes()
     
     dx7Settings.setPitchScale(0.5, 0.5, 1, 4, 2, 10);
     dx7Settings.setVelocityLevel(0.7, 0.3, 0.3, 0.7, 0.7, 0.6);
-    dx7Settings.setFeedbackLevel(0.0, 0, 0, 0, 0, 0.2);
-    dx7Settings.setPitchIndependent(false, false, false, false, false, false);
+    dx7Settings.setFeedbackLevel(0.2);
+    dx7Settings.setFixedPitch(false, false, false, false, false, false);
     dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackTime(0.001, 0.002, 0.003, 0.001, 0.001, 0.001);
@@ -91,8 +91,8 @@ FSDX7Settings solidBass()
     
     dx7Settings.setPitchScale(1, 1, 0.5, 0.5, 1, 1);
     dx7Settings.setVelocityLevel(0.7, 0.3, 0.7, 0.4, 0.5, 0.6);
-    dx7Settings.setFeedbackLevel(0.0, 0, 0, 0, 0, 0.2);
-    dx7Settings.setPitchIndependent(false, false, false, false, false, false);
+    dx7Settings.setFeedbackLevel(0.2);
+    dx7Settings.setFixedPitch(false, false, false, false, false, false);
     dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackTime(0.01, 0.02, 0.03, 0.01, 0.01, 0.01);
@@ -112,8 +112,8 @@ FSDX7Settings rhodesSetting()
     
     dx7Settings.setPitchScale(0.98, 12.0, 1, 1, 1.02, 1.01);
     dx7Settings.setVelocityLevel(0.3, 0.1, 0.3, 0.1, 0.3, 0.1);
-    dx7Settings.setFeedbackLevel(0.0, 0, 0, 0, 0, 0.1);
-    dx7Settings.setPitchIndependent(false, false, false, false, false, false);
+    dx7Settings.setFeedbackLevel(0.1);
+    dx7Settings.setFixedPitch(false, false, false, false, false, false);
     dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackTime(0.01, 0.02, 0.03, 0.01, 0.01, 0.01);
@@ -133,8 +133,8 @@ FSDX7Settings steelDrum()
     
     dx7Settings.setPitchScale(1, 1.7, 1, 2.07, 5.32, 398.1);
     dx7Settings.setVelocityLevel(0.6, 0.34, 0.6, 0.38, 0.34, 0.29);
-    dx7Settings.setFeedbackLevel(0, 0.1, 0, 0, 0, 0);
-    dx7Settings.setPitchIndependent(false, false, false, false, false, true);
+    dx7Settings.setFeedbackLevel(0.1);
+    dx7Settings.setFixedPitch(false, false, false, false, false, true);
     dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
     dx7Settings.setAttackTime(0.01, 0.05, 0.01, 0.05, 0.05, 0.05);
@@ -155,7 +155,7 @@ int main(int argc, const char * argv[])
     
     double times[12] = {0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.4, 0.2, 0.1, 0.1, 0.1, 0.1};
     double frequencies[5] = {
-        FSUtils::mtof(36), FSUtils::mtof(51), FSUtils::mtof(41), FSUtils::mtof(51), FSUtils::mtof(60)};
+        FSUtils::mtof(36), FSUtils::mtof(108), FSUtils::mtof(96), FSUtils::mtof(84), FSUtils::mtof(60)};
     double amps[5] = {0.5, 0.6, 0.6, 0.5, 0.5};
     
     FSPatch *mainPatch = new FSPatch(0, 2);
