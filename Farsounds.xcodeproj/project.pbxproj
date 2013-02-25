@@ -54,6 +54,7 @@
 		9BDBF60016D9333F00940124 /* dx7_example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBF5FE16D9333F00940124 /* dx7_example.cpp */; };
 		9BE4E76D16D6908B002E107E /* FSOneShotTriggerModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4E76B16D6908B002E107E /* FSOneShotTriggerModule.cpp */; };
 		9BE4E77016D69295002E107E /* FSMultiplierModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4E76E16D69295002E107E /* FSMultiplierModule.cpp */; };
+		9BFD09C916DA627A00FB986E /* FSDX7Envelope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD09C716DA627A00FB986E /* FSDX7Envelope.cpp */; };
 		9BFDE39C16D53E2C00E8D4EF /* FSSpawnFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE39A16D53E2C00E8D4EF /* FSSpawnFactory.cpp */; };
 		9BFDE39F16D53E4A00E8D4EF /* FSSpawnModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE39D16D53E4A00E8D4EF /* FSSpawnModule.cpp */; };
 		9BFDE3A216D55DE600E8D4EF /* spawnfactory_example1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE3A016D55DE600E8D4EF /* spawnfactory_example1.cpp */; };
@@ -166,6 +167,8 @@
 		9BE4E76C16D6908B002E107E /* FSOneShotTriggerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSOneShotTriggerModule.h; sourceTree = "<group>"; };
 		9BE4E76E16D69295002E107E /* FSMultiplierModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSMultiplierModule.cpp; sourceTree = "<group>"; };
 		9BE4E76F16D69295002E107E /* FSMultiplierModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMultiplierModule.h; sourceTree = "<group>"; };
+		9BFD09C716DA627A00FB986E /* FSDX7Envelope.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSDX7Envelope.cpp; sourceTree = "<group>"; };
+		9BFD09C816DA627A00FB986E /* FSDX7Envelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDX7Envelope.h; sourceTree = "<group>"; };
 		9BFDE39A16D53E2C00E8D4EF /* FSSpawnFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSpawnFactory.cpp; sourceTree = "<group>"; };
 		9BFDE39B16D53E2C00E8D4EF /* FSSpawnFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSpawnFactory.h; sourceTree = "<group>"; };
 		9BFDE39D16D53E4A00E8D4EF /* FSSpawnModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSpawnModule.cpp; sourceTree = "<group>"; };
@@ -340,6 +343,8 @@
 				9B97FA6016CE6E5200B029F9 /* FSAllpass.cpp */,
 				9B83FFC016D17C3200BAA0C2 /* FSSoundFile.h */,
 				9B83FFBF16D17C3200BAA0C2 /* FSSoundFile.cpp */,
+				9BFD09C816DA627A00FB986E /* FSDX7Envelope.h */,
+				9BFD09C716DA627A00FB986E /* FSDX7Envelope.cpp */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -462,6 +467,7 @@
 				9BDBF5FA16D929E800940124 /* FSDX7Operator.cpp in Sources */,
 				9BDBF5FD16D92B4300940124 /* FSDX7.cpp in Sources */,
 				9BDBF60016D9333F00940124 /* dx7_example.cpp in Sources */,
+				9BFD09C916DA627A00FB986E /* FSDX7Envelope.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

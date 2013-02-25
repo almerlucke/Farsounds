@@ -28,12 +28,9 @@ struct FSDX7OperatorSettings
 {
     // pitch scaler if pitch is connected to external pitch module and independent pitch is false, else pitchScale in Hz
     double pitchScale;
-    // output level (if modulator = depth of modulation, else = output velocity)
     double velocityLevel;
-    // self feedback level (distortion)
-    double feedbackLevel;
     // the way pitch (Hz) scale is interpreted, if false = pitchScale * inputPitch, else = pitchScale
-    bool pitchIndependent;
+    bool fixedPitch;
     // adsr envelope
     double attackLevel;
     double attackShape;
@@ -51,7 +48,6 @@ class FSDX7Operator
 public:
     FSModule *osc;
     FSADSREnvelopeModule *adsr;
-    FSMultiplierModule *feedback;
     FSMultiplierModule *amp;
     FSMultiplierModule *freq;
     
