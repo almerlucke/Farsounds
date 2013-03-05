@@ -16,135 +16,173 @@
 #include "FSSequenceModule.h"
 #include "FSPanningModule.h"
 #include "FSRampModule.h"
+#include "FSScalerModule.h"
+#include "FSSpawnModule.h"
 #include "FSDX7.h"
 #include "FSBiquadFilterModule.h"
-
+#include "FSSpawnFactory.h"
 #include <FCMidi.h>
-
 #include <iostream>
+
+
+class FSMidiMan :public FSSpawnFactory {
+
+    double _deltaTimeBaseInSeconds;
+    FCMidiTrackEventItem *_eventItem;
+    uint64_t _deltaTimeSamples;
+    double _deltaTimeSamplesDiv;
+    bool _firstProduce;
+    
+public:
+    FSMidiMan(FCMidiFile *midiFile, int channel) : FSSpawnFactory()
+    {
+        FCMidiTrack *tracks = midiFile->tracks();
+        FCMidiTrack *infoTrack = &tracks[0];
+        FCMidiTrack *playTrack = &tracks[channel];
+        
+        _eventItem = playTrack->events();
+        
+        if (midiFile->hasTicksPerBeat()) {
+            uint32_t ticksPerBeat = midiFile->ticksPerBeat();
+            uint32_t microSecondsPerQuarterNote = infoTrack->tempoMPQN();
+            _deltaTimeBaseInSeconds = (microSecondsPerQuarterNote / (double)ticksPerBeat) / 1000000.0;
+        }
+        
+        double _deltaTimeSampleReal = playTrack->SMPTEOffset() * FSEnvironment::sampleRate;
+        
+        if (_eventItem != NULL) {
+            if (_eventItem->event->deltaTime() > 0) {
+                _deltaTimeSampleReal += _deltaTimeBaseInSeconds * _eventItem->event->deltaTime() * FSEnvironment::sampleRate;
+            }
+        }
+        
+        _deltaTimeSamples = _deltaTimeSampleReal;
+        _deltaTimeSamplesDiv = _deltaTimeSampleReal - _deltaTimeSamples;
+    }
+    
+    ~FSMidiMan()
+    {
+        
+    }
+    
+    int numOutputsPerSpawn() { return 1; }
+    
+    void startProductionCycle()
+    {
+        _firstProduce = false;
+    }
+    
+    FSSpawn *generateSpawnWithEvent(FCMidiChannelEvent *event)
+    {
+        double durationInSeconds = FSUtils::randRange(0.02, 0.4);
+        double triggers[] = {durationInSeconds};
+        
+        FSPatch *patch = new FSPatch(0, 1);
+        FSSquareModule *square = new FSSquareModule(FSUtils::mtof(event->param1()));
+        FSADSREnvelopeModule *adsr = new FSADSREnvelopeModule();
+        FSScalerModule *scaler = new FSScalerModule();
+        FSTimedTriggerModule *trigger = new FSTimedTriggerModule(triggers, 1, 0, false);
+        
+        patch->addModule(square);
+        patch->addModule(adsr);
+        patch->addModule(scaler);
+        patch->addModule(trigger);
+        
+        adsr->connect(trigger, 0, 0);
+        scaler->connect(square, 0, 0);
+        scaler->connect(adsr, 0, 1);
+        
+        patch->outputProxyAtIndex(0)->connect(scaler, 0, 0);
+        
+        adsr->envelope->attackLevel = event->param2() / 127.0;
+        adsr->envelope->decayLevel = 0.2;
+        adsr->envelope->attackTimePercentage = 0.00001;
+        adsr->envelope->decayTimePercentage = 0.00001;
+        adsr->envelope->sustainTimePercentage = 0.2;
+        adsr->envelope->duration = FSEnvironment::sampleRate * durationInSeconds;
+        
+        FSSpawn *spawn = new FSSpawn();
+        
+        spawn->duration = FSEnvironment::sampleRate * durationInSeconds;
+        spawn->module = patch;
+        
+        return spawn;
+    }
+    
+    FSSpawn *produce()
+    {
+        FSSpawn *spawn = NULL;
+        
+        if (_eventItem != NULL) {
+            if (_deltaTimeSamples == 0) {
+                if (_eventItem->event->deltaTime() != 0) {
+                    if (!_firstProduce) {
+                        _firstProduce = true;
+                        if (_eventItem->event->eventType() == FCMidiEventTypeChannel &&
+                            ((FCMidiChannelEvent *)_eventItem->event)->channelEventType() == FCMidiChannelEventTypeNoteOn) {
+                            spawn = this->generateSpawnWithEvent((FCMidiChannelEvent *)_eventItem->event);
+                            _eventItem = _eventItem->next;
+                        } else {
+                            _eventItem = _eventItem->next;
+                            spawn = this->produce();
+                        }
+                    } else {
+                        double deltaTimeSamplesReal = _deltaTimeBaseInSeconds * _eventItem->event->deltaTime() * FSEnvironment::sampleRate;
+                        _deltaTimeSamples = deltaTimeSamplesReal;
+                        _deltaTimeSamplesDiv += deltaTimeSamplesReal - _deltaTimeSamples;
+                        int deltaTimeSamplesAdd = (int)_deltaTimeSamplesDiv;
+                        _deltaTimeSamples += deltaTimeSamplesAdd;
+                        _deltaTimeSamplesDiv -= deltaTimeSamplesAdd;
+                    }
+                } else {
+                    if (_eventItem->event->eventType() == FCMidiEventTypeChannel &&
+                        ((FCMidiChannelEvent *)_eventItem->event)->channelEventType() == FCMidiChannelEventTypeNoteOn) {
+                        spawn = this->generateSpawnWithEvent((FCMidiChannelEvent *)_eventItem->event);
+                        _eventItem = _eventItem->next;
+                    } else {
+                        _eventItem = _eventItem->next;
+                        spawn = this->produce();
+                    }
+                }
+            }
+        }
+        
+        return spawn;
+    }
+    
+    void endProductionCycle()
+    {
+        _deltaTimeSamples--;
+    }
+};
 
 
 int main(int argc, const char * argv[])
 {
-    /*
     FSUtils::seedRand();
     
-    double times[12] = {0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.4, 0.2, 0.1, 0.1, 0.1, 0.1};
-    double frequencies[5] = {
-        FSUtils::mtof(36), FSUtils::mtof(108), FSUtils::mtof(96), FSUtils::mtof(84), FSUtils::mtof(60)};
-    double amps[5] = {0.5, 0.6, 0.6, 0.5, 0.5};
-    
-    FSPatch *mainPatch = new FSPatch(0, 2);
-    
-    FSTimedTriggerModule *trigger = new FSTimedTriggerModule(times, 12, 0, true);
-    FSSequenceModule *sequencer = new FSSequenceModule(frequencies, 5);
-    FSSequenceModule *ampSequencer = new FSSequenceModule(amps, 5);
-    FSRampModule *ramp = new FSRampModule(100, 100, 0.001, 1.6);
-    FSMultiplierModule *amp = new FSMultiplierModule(2);
-    FSAllpassModule *allpass = new FSAllpassModule(FSEnvironment::sampleRate * 0.3, 0.2);
-    FSPanningModule *pan = new FSPanningModule(0);
-    
-    FSDX7 *dx7 = new FSDX7(tubularBells(), FSDX7_ALGORITHM5, amp, 0, mainPatch);
-    dx7->connectTrigger(trigger, 0);
-    dx7->connectDuration(trigger, 1);
-    dx7->connectPitch(ramp, 0);
-    
-    FSDX7 *dx7_2 = new FSDX7(tubularBells2(), FSDX7_ALGORITHM5, amp, 0, mainPatch);
-    dx7_2->connectTrigger(trigger, 0);
-    dx7_2->connectDuration(trigger, 1);
-    dx7_2->connectPitch(ramp, 0);
-    
-    sequencer->connect(trigger, 0, 0);
-    ramp->connect(trigger, 0, 0);
-    ramp->connect(sequencer, 0, 2);
-    ampSequencer->connect(trigger, 0, 0);
-    amp->connect(ampSequencer, 0, 1);
-    allpass->connect(amp, 0, 0);
-    pan->connect(allpass, 0, 0);
-    
-    mainPatch->addModule(amp);
-    mainPatch->addModule(pan);
-    mainPatch->addModule(ramp);
-    mainPatch->addModule(trigger);
-    mainPatch->addModule(allpass);
-    mainPatch->addModule(sequencer);
-    mainPatch->addModule(ampSequencer);
-    
-    mainPatch->outputProxyAtIndex(0)->connect(pan, 0, 0);
-    mainPatch->outputProxyAtIndex(1)->connect(pan, 1, 0);
-    
-    FSUtils::generateSoundFile("/Users/aFrogleap/Desktop/test.wav", mainPatch, 20);
-    
-    delete dx7;
-    delete mainPatch;
-    */
-    
-    FSUtils::seedRand();
-    
-    double times[1] = {1.0};
+    FCMidiFile *midiFile;
+    FCMidiErrorType error = FCMidiErrorTypeNone;
+    midiFile = new FCMidiFile();
+    midiFile->read("/Users/almerlucke/Documents/MidiFiles/MSX/ZANAC2.MID", &error);
     
     FSPatch *mainPatch = new FSPatch(0, 1);
+    FSScalerModule *scaler = new FSScalerModule(0.2);
+
+    mainPatch->addModule(scaler);
     
-    double bw = 0.001;
-    
-    FSTimedTriggerModule *trigger = new FSTimedTriggerModule(times, 1, 0, true);
-    FSBiquadFilterModule *biquad1 = new FSBiquadFilterModule(FSBiquadFilterTypeBPF, 0, 1200, bw);
-    FSMultiplierModule *mult1 = new FSMultiplierModule(2.0 / bw);
-    FSBiquadFilterModule *biquad2 = new FSBiquadFilterModule(FSBiquadFilterTypeBPF, 0, 720, bw);
-    FSMultiplierModule *mult2 = new FSMultiplierModule(2.0 / bw);
-    FSBiquadFilterModule *biquad3 = new FSBiquadFilterModule(FSBiquadFilterTypeBPF, 0, 400, bw);
-    FSMultiplierModule *mult3 = new FSMultiplierModule(2.0 / bw);
-    FSBiquadFilterModule *biquad4 = new FSBiquadFilterModule(FSBiquadFilterTypeBPF, 0, 240, bw);
-    FSMultiplierModule *mult4 = new FSMultiplierModule(2.0 / bw);
-    
-    mult1->connect(biquad1, 0, 0);
-    biquad1->connect(trigger, 0, 0);
-    mainPatch->outputProxyAtIndex(0)->connect(mult1, 0, 0);
-    mult2->connect(biquad2, 0, 0);
-    biquad2->connect(trigger, 0, 0);
-    mainPatch->outputProxyAtIndex(0)->connect(mult2, 0, 0);
-    mult3->connect(biquad3, 0, 0);
-    biquad3->connect(trigger, 0, 0);
-    mainPatch->outputProxyAtIndex(0)->connect(mult3, 0, 0);
-    mult4->connect(biquad4, 0, 0);
-    biquad4->connect(trigger, 0, 0);
-    mainPatch->outputProxyAtIndex(0)->connect(mult4, 0, 0);
-    
-    mainPatch->addModule(trigger);
-    mainPatch->addModule(biquad1);
-    mainPatch->addModule(mult1);
-    mainPatch->addModule(biquad2);
-    mainPatch->addModule(mult2);
-    mainPatch->addModule(biquad3);
-    mainPatch->addModule(mult3);
-    mainPatch->addModule(biquad4);
-    mainPatch->addModule(mult4);
-    
-    FSUtils::generateSoundFile("test.wav", mainPatch, 10);
-    
-    delete mainPatch;
-    
-    
-    FCMidiFile *midiFile = new FCMidiFile();
-    FCMidiErrorType error = FCMidiErrorTypeNone;
-    
-    if (midiFile->read("/Users/almerlucke/Desktop/teddybear.mid", &error)) {
-        FCMidiTrack *tracks = midiFile->tracks();
-        
-        for (int i = 0; i < midiFile->numTracks(); i++) {
-            FCMidiTrack *track = &tracks[i];
-            FCMidiTrackEventItem *eventItem = track->events();
-            
-            while (eventItem != NULL) {
-                printf("deltaTime %d - ", eventItem->event->deltaTime());
-                eventItem->event->printEvent();
-                eventItem = eventItem->next;
-            }
-        }
+    for (int i = 0; i < midiFile->numTracks(); i++) {
+        FSMidiMan *midiMan = new FSMidiMan(midiFile, i);
+        FSSpawnModule *spawnModule = new FSSpawnModule(midiMan);
+        mainPatch->addModule(spawnModule);
+        scaler->connect(spawnModule, 0, 0);
     }
     
-    delete midiFile;
+    mainPatch->outputProxyAtIndex(0)->connect(scaler, 0, 0);
     
+    FSUtils::generateSoundFile("test.wav", mainPatch, 45);
+    
+    delete mainPatch;
     
     return 0;
 }
