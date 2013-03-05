@@ -203,7 +203,7 @@ void dx7_example()
     mainPatch->outputProxyAtIndex(0)->connect(pan3, 0, 0);
     mainPatch->outputProxyAtIndex(1)->connect(pan3, 1, 0);
     
-    FSUtils::generateSoundFile("/Users/aFrogleap/Desktop/test.wav", mainPatch, 120);
+    FSUtils::generateSoundFile("test.wav", mainPatch, 120);
     
     delete dx7;
     delete dx72;

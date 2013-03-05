@@ -11,6 +11,7 @@
 
 #include <stdint.h>
 
+
 class FSDX7Envelope {
     int _stage;
     uint64_t _level1Time; // level4 -> level1, stage 0
@@ -35,6 +36,7 @@ public:
     double dur2; // duration level1 -> level2
     double dur3; // duration level2 -> level3
     double dur4; // sustain duration
+    double dur5; // release duration
     
     FSDX7Envelope()
     {

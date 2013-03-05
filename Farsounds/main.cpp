@@ -17,138 +17,11 @@
 #include "FSPanningModule.h"
 #include "FSRampModule.h"
 #include "FSDX7.h"
+#include "FSBiquadFilterModule.h"
 
-#include "dx7_example.h"
+#include <FCMidi.h>
 
 #include <iostream>
-
-FSDX7Settings tubularBells()
-{
-    FSDX7Settings dx7Settings;
-    
-    dx7Settings.setPitchScale(1, 3.5, 1, 3.5, 323.6, 2);
-    dx7Settings.setVelocityLevel(0.7, 0.3, 0.4, 0.4, 0.2, 0.2);
-    dx7Settings.setFeedbackLevel(0.2);
-    dx7Settings.setFixedPitch(false, false, false, false, true, false);
-    dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
-    dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
-    dx7Settings.setAttackTime(0.01, 0.02, 0.03, 0.01, 0.01, 0.01);
-    dx7Settings.setDecayLevel(0.4, 0.4, 0.4, 0.4, 0.4, 0.4);
-    dx7Settings.setDecayShape(1, 1, 1, 1, 1, 1);
-    dx7Settings.setDecayTime(0.01, 0.02, 0.02, 0.01, 0.01, 0.01);
-    dx7Settings.setSustainTime(0.01, 0.01, 0.01, 0.01, 0.01, 0.01);
-    dx7Settings.setReleaseShape(3, 3, 3, 3, 3, 3);
-    dx7Settings.setWave(FSDX7OperatorWaveSine, FSDX7OperatorWaveSine, FSDX7OperatorWaveSine,
-                        FSDX7OperatorWaveSine, FSDX7OperatorWaveSine, FSDX7OperatorWaveSine);
-    
-    return dx7Settings;
-}
-
-FSDX7Settings tubularBells2()
-{
-    FSDX7Settings dx7Settings;
-    
-    dx7Settings.setPitchScale(0.5, 3.5, 0.51, 3.5, 333.6, 2.01);
-    dx7Settings.setVelocityLevel(0.7, 0.5, 0.4, 0.4, 0.2, 0.5);
-    dx7Settings.setFeedbackLevel(0.2);
-    dx7Settings.setFixedPitch(false, false, false, false, true, false);
-    dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
-    dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
-    dx7Settings.setAttackTime(0.01, 0.02, 0.03, 0.01, 0.01, 0.01);
-    dx7Settings.setDecayLevel(0.4, 0.4, 0.4, 0.4, 0.4, 0.4);
-    dx7Settings.setDecayShape(1, 1, 1, 1, 1, 1);
-    dx7Settings.setDecayTime(0.01, 0.02, 0.02, 0.01, 0.01, 0.01);
-    dx7Settings.setSustainTime(0.01, 0.01, 0.01, 0.01, 0.01, 0.01);
-    dx7Settings.setReleaseShape(3, 3, 3, 3, 3, 3);
-    dx7Settings.setWave(FSDX7OperatorWaveSine, FSDX7OperatorWaveSine, FSDX7OperatorWaveSine,
-                        FSDX7OperatorWaveSine, FSDX7OperatorWaveSine, FSDX7OperatorWaveSine);
-    
-    return dx7Settings;
-}
-
-FSDX7Settings pipes()
-{
-    FSDX7Settings dx7Settings;
-    
-    dx7Settings.setPitchScale(0.5, 0.5, 1, 4, 2, 10);
-    dx7Settings.setVelocityLevel(0.7, 0.3, 0.3, 0.7, 0.7, 0.6);
-    dx7Settings.setFeedbackLevel(0.2);
-    dx7Settings.setFixedPitch(false, false, false, false, false, false);
-    dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
-    dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
-    dx7Settings.setAttackTime(0.001, 0.002, 0.003, 0.001, 0.001, 0.001);
-    dx7Settings.setDecayLevel(0.4, 0.4, 0.4, 0.4, 0.4, 0.4);
-    dx7Settings.setDecayShape(1, 1, 1, 1, 1, 1);
-    dx7Settings.setDecayTime(0.001, 0.002, 0.002, 0.001, 0.001, 0.001);
-    dx7Settings.setSustainTime(0.001, 0.001, 0.001, 0.001, 0.001, 0.001);
-    dx7Settings.setReleaseShape(3, 3, 3, 3, 3, 3);
-    dx7Settings.setWave(FSDX7OperatorWaveSine);
-    
-    return dx7Settings;
-}
-
-FSDX7Settings solidBass()
-{
-    FSDX7Settings dx7Settings;
-    
-    dx7Settings.setPitchScale(1, 1, 0.5, 0.5, 1, 1);
-    dx7Settings.setVelocityLevel(0.7, 0.3, 0.7, 0.4, 0.5, 0.6);
-    dx7Settings.setFeedbackLevel(0.2);
-    dx7Settings.setFixedPitch(false, false, false, false, false, false);
-    dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
-    dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
-    dx7Settings.setAttackTime(0.01, 0.02, 0.03, 0.01, 0.01, 0.01);
-    dx7Settings.setDecayLevel(0.4, 0.4, 0.4, 0.4, 0.4, 0.4);
-    dx7Settings.setDecayShape(1, 1, 1, 1, 1, 1);
-    dx7Settings.setDecayTime(0.01, 0.02, 0.02, 0.01, 0.01, 0.01);
-    dx7Settings.setSustainTime(0.1, 0.1, 0.1, 0.1, 0.1, 0.1);
-    dx7Settings.setReleaseShape(3, 3, 3, 3, 3, 3);
-    dx7Settings.setWave(FSDX7OperatorWaveTri);
-    
-    return dx7Settings;
-}
-
-FSDX7Settings rhodesSetting()
-{
-    FSDX7Settings dx7Settings;
-    
-    dx7Settings.setPitchScale(0.98, 12.0, 1, 1, 1.02, 1.01);
-    dx7Settings.setVelocityLevel(0.3, 0.1, 0.3, 0.1, 0.3, 0.1);
-    dx7Settings.setFeedbackLevel(0.1);
-    dx7Settings.setFixedPitch(false, false, false, false, false, false);
-    dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
-    dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
-    dx7Settings.setAttackTime(0.01, 0.02, 0.03, 0.01, 0.01, 0.01);
-    dx7Settings.setDecayLevel(0.4, 0.4, 0.4, 0.4, 0.4, 0.4);
-    dx7Settings.setDecayShape(1, 1, 1, 1, 1, 1);
-    dx7Settings.setDecayTime(0.01, 0.02, 0.02, 0.01, 0.01, 0.01);
-    dx7Settings.setSustainTime(0.1, 0.1, 0.1, 0.1, 0.1, 0.1);
-    dx7Settings.setReleaseShape(3, 3, 3, 3, 3, 3);
-    dx7Settings.setWave(FSDX7OperatorWaveSine);
-    
-    return dx7Settings;
-}
-
-FSDX7Settings steelDrum()
-{
-    FSDX7Settings dx7Settings;
-    
-    dx7Settings.setPitchScale(1, 1.7, 1, 2.07, 5.32, 398.1);
-    dx7Settings.setVelocityLevel(0.6, 0.34, 0.6, 0.38, 0.34, 0.29);
-    dx7Settings.setFeedbackLevel(0.1);
-    dx7Settings.setFixedPitch(false, false, false, false, false, true);
-    dx7Settings.setAttackLevel(1, 1, 1, 1, 1, 1);
-    dx7Settings.setAttackShape(1, 1, 1, 1, 1, 1);
-    dx7Settings.setAttackTime(0.01, 0.05, 0.01, 0.05, 0.05, 0.05);
-    dx7Settings.setDecayLevel(0.4, 0.4, 0.4, 0.4, 0.4, 0.4);
-    dx7Settings.setDecayShape(1, 1, 1, 1, 1, 1);
-    dx7Settings.setDecayTime(0.01, 0.05, 0.01, 0.05, 0.05, 0.05);
-    dx7Settings.setSustainTime(0.01, 0.1, 0.01, 0.1, 0.1, 0.1);
-    dx7Settings.setReleaseShape(3, 3, 3, 3, 3, 3);
-    dx7Settings.setWave(FSDX7OperatorWaveSine);
-    
-    return dx7Settings;
-}
 
 
 int main(int argc, const char * argv[])
@@ -204,9 +77,74 @@ int main(int argc, const char * argv[])
     
     delete dx7;
     delete mainPatch;
-     */
+    */
     
-    dx7_example();
+    FSUtils::seedRand();
+    
+    double times[1] = {1.0};
+    
+    FSPatch *mainPatch = new FSPatch(0, 1);
+    
+    double bw = 0.001;
+    
+    FSTimedTriggerModule *trigger = new FSTimedTriggerModule(times, 1, 0, true);
+    FSBiquadFilterModule *biquad1 = new FSBiquadFilterModule(FSBiquadFilterTypeBPF, 0, 1200, bw);
+    FSMultiplierModule *mult1 = new FSMultiplierModule(2.0 / bw);
+    FSBiquadFilterModule *biquad2 = new FSBiquadFilterModule(FSBiquadFilterTypeBPF, 0, 720, bw);
+    FSMultiplierModule *mult2 = new FSMultiplierModule(2.0 / bw);
+    FSBiquadFilterModule *biquad3 = new FSBiquadFilterModule(FSBiquadFilterTypeBPF, 0, 400, bw);
+    FSMultiplierModule *mult3 = new FSMultiplierModule(2.0 / bw);
+    FSBiquadFilterModule *biquad4 = new FSBiquadFilterModule(FSBiquadFilterTypeBPF, 0, 240, bw);
+    FSMultiplierModule *mult4 = new FSMultiplierModule(2.0 / bw);
+    
+    mult1->connect(biquad1, 0, 0);
+    biquad1->connect(trigger, 0, 0);
+    mainPatch->outputProxyAtIndex(0)->connect(mult1, 0, 0);
+    mult2->connect(biquad2, 0, 0);
+    biquad2->connect(trigger, 0, 0);
+    mainPatch->outputProxyAtIndex(0)->connect(mult2, 0, 0);
+    mult3->connect(biquad3, 0, 0);
+    biquad3->connect(trigger, 0, 0);
+    mainPatch->outputProxyAtIndex(0)->connect(mult3, 0, 0);
+    mult4->connect(biquad4, 0, 0);
+    biquad4->connect(trigger, 0, 0);
+    mainPatch->outputProxyAtIndex(0)->connect(mult4, 0, 0);
+    
+    mainPatch->addModule(trigger);
+    mainPatch->addModule(biquad1);
+    mainPatch->addModule(mult1);
+    mainPatch->addModule(biquad2);
+    mainPatch->addModule(mult2);
+    mainPatch->addModule(biquad3);
+    mainPatch->addModule(mult3);
+    mainPatch->addModule(biquad4);
+    mainPatch->addModule(mult4);
+    
+    FSUtils::generateSoundFile("test.wav", mainPatch, 10);
+    
+    delete mainPatch;
+    
+    
+    FCMidiFile *midiFile = new FCMidiFile();
+    FCMidiErrorType error = FCMidiErrorTypeNone;
+    
+    if (midiFile->read("/Users/almerlucke/Desktop/teddybear.mid", &error)) {
+        FCMidiTrack *tracks = midiFile->tracks();
+        
+        for (int i = 0; i < midiFile->numTracks(); i++) {
+            FCMidiTrack *track = &tracks[i];
+            FCMidiTrackEventItem *eventItem = track->events();
+            
+            while (eventItem != NULL) {
+                printf("deltaTime %d - ", eventItem->event->deltaTime());
+                eventItem->event->printEvent();
+                eventItem = eventItem->next;
+            }
+        }
+    }
+    
+    delete midiFile;
+    
     
     return 0;
 }
