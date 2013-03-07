@@ -13,6 +13,8 @@ FSModule::FSModule()
 {
     _inputs = NULL;
     _outputs = NULL;
+    _numInputs = 0;
+    _numOutputs = 0;
 }
 
 FSModule::FSModule(int numInputs, int numOutputs) : _numInputs(numInputs), _numOutputs(numOutputs)

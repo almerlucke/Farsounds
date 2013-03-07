@@ -26,7 +26,6 @@
 
 
 class FSMidiMan :public FSSpawnFactory {
-
     double _deltaTimeBaseInSeconds;
     FCMidiTrackEventItem *_eventItem;
     uint64_t _deltaTimeSamples;
@@ -72,9 +71,34 @@ public:
         _firstProduce = false;
     }
     
-    FSSpawn *generateSpawnWithEvent(FCMidiChannelEvent *event)
-    {
-        double durationInSeconds = FSUtils::randRange(0.02, 0.4);
+    FSSpawn *generateSpawnWithEventItem(FCMidiTrackEventItem *eventItem)
+    {        
+        FCMidiChannelEvent *event = (FCMidiChannelEvent *)eventItem->event;
+        
+        uint32_t deltaTimeTotal = 0;
+        bool noteOffFound = false;
+        FCMidiTrackEventItem *item = eventItem->next;
+        while (item != NULL) {
+            deltaTimeTotal += item->event->deltaTime();
+            if (item->event->eventType() == FCMidiEventTypeChannel) {
+                FCMidiChannelEvent *noteOffEvent = (FCMidiChannelEvent *)item->event;
+                if (noteOffEvent->channelEventType() == FCMidiChannelEventTypeNoteOff &&
+                    noteOffEvent->channel() == event->channel() &&
+                    noteOffEvent->param1() == event->param1()) {
+                    noteOffFound = true;
+                    break;
+                }
+            }
+            item = item->next;
+        }
+        
+        if (!noteOffFound) {
+            deltaTimeTotal = 0;
+            printf("no matching note off found");
+            fflush(stdout);
+        }
+        
+        double durationInSeconds = deltaTimeTotal * _deltaTimeBaseInSeconds;
         double triggers[] = {durationInSeconds};
         
         FSPatch *patch = new FSPatch(0, 1);
@@ -96,9 +120,9 @@ public:
         
         adsr->envelope->attackLevel = event->param2() / 127.0;
         adsr->envelope->decayLevel = 0.2;
-        adsr->envelope->attackTimePercentage = 0.00001;
-        adsr->envelope->decayTimePercentage = 0.00001;
-        adsr->envelope->sustainTimePercentage = 0.2;
+        adsr->envelope->attackTimePercentage = 0.000001;
+        adsr->envelope->decayTimePercentage = 0.000001;
+        adsr->envelope->sustainTimePercentage = 0.1;
         adsr->envelope->duration = FSEnvironment::sampleRate * durationInSeconds;
         
         FSSpawn *spawn = new FSSpawn();
@@ -120,7 +144,7 @@ public:
                         _firstProduce = true;
                         if (_eventItem->event->eventType() == FCMidiEventTypeChannel &&
                             ((FCMidiChannelEvent *)_eventItem->event)->channelEventType() == FCMidiChannelEventTypeNoteOn) {
-                            spawn = this->generateSpawnWithEvent((FCMidiChannelEvent *)_eventItem->event);
+                            spawn = this->generateSpawnWithEventItem(_eventItem);
                             _eventItem = _eventItem->next;
                         } else {
                             _eventItem = _eventItem->next;
@@ -137,7 +161,7 @@ public:
                 } else {
                     if (_eventItem->event->eventType() == FCMidiEventTypeChannel &&
                         ((FCMidiChannelEvent *)_eventItem->event)->channelEventType() == FCMidiChannelEventTypeNoteOn) {
-                        spawn = this->generateSpawnWithEvent((FCMidiChannelEvent *)_eventItem->event);
+                        spawn = this->generateSpawnWithEventItem(_eventItem);
                         _eventItem = _eventItem->next;
                     } else {
                         _eventItem = _eventItem->next;
@@ -164,7 +188,7 @@ int main(int argc, const char * argv[])
     FCMidiFile *midiFile;
     FCMidiErrorType error = FCMidiErrorTypeNone;
     midiFile = new FCMidiFile();
-    midiFile->read("/Users/almerlucke/Documents/MidiFiles/MSX/ZANAC2.MID", &error);
+    midiFile->read("/Users/almerlucke/Documents/MidiFiles/take5.mid", &error);
     
     FSPatch *mainPatch = new FSPatch(0, 1);
     FSScalerModule *scaler = new FSScalerModule(0.2);
@@ -180,8 +204,9 @@ int main(int argc, const char * argv[])
     
     mainPatch->outputProxyAtIndex(0)->connect(scaler, 0, 0);
     
-    FSUtils::generateSoundFile("test.wav", mainPatch, 45);
+    FSUtils::generateSoundFile("test.wav", mainPatch, 60);
     
+    delete midiFile;
     delete mainPatch;
     
     return 0;
