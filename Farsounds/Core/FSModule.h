@@ -33,8 +33,12 @@ public:
     
     virtual void run() { _hasRun = true; };
     virtual void resetHasRun() { _hasRun = false; }
-    
     bool hasRun() { return _hasRun; }
+    
+    // voiced module virtual functions
+    virtual bool isFinished() { return true; }
+    virtual void noteOn(int channel, int pitch, int velocity) {}
+    virtual void noteOff(int channel, int pitch, int velocity) {}
 };
 
 #endif /* defined(__Farsounds__FSModule__) */
