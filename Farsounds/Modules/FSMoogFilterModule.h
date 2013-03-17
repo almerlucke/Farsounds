@@ -10,21 +10,24 @@
 #define __Farsounds__FSMoogFilterModule__
 
 #include "FSModule.h"
+#include "FSMoogFilter.h"
 
 class FSMoogFilterModule :public FSModule {
-    double _resonance;
-    double _cutoff;
-    double _oldx;
-    double _oldy1;
-    double _oldy2;
-    double _oldy3;
-    double _y1;
-    double _y2;
-    double _y3;
-    double _y4;
+//    double _resonance;
+//    double _cutoff;
+//    double _oldx;
+//    double _oldy1;
+//    double _oldy2;
+//    double _oldy3;
+//    double _y1;
+//    double _y2;
+//    double _y3;
+//    double _y4;
+    FSMoogFilter *_filter;
     
 public:
     FSMoogFilterModule(double cutoff, double resonance);
+    ~FSMoogFilterModule();
     void run();
 };
 

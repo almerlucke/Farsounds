@@ -222,3 +222,17 @@ void FSUtils::kaiserWindow(double *window, int windowLength, double beta)
         window[n] = modZeroBessel(beta * sqrt(val)) / denom;
     }
 }
+
+
+
+double FSUtils::saturate(double input, double limit)
+{ //clamp without branching
+    float x1 = fabsf(input + limit);
+    float x2 = fabsf(input - limit);
+    return 0.5 * (x1 - x2);
+}
+
+double FSUtils::crossfade(double amount, double a, double b)
+{
+    return (1 - amount) * a + amount * b;
+}

@@ -22,6 +22,8 @@ public:
     // wrap and clip
     static double wrap(double sample, double low, bool lowInclusive, double high, bool highInclusive);
     static double clip(double input, double low, double high);
+    static double saturate(double input, double limit);
+    static double crossfade(double amount, double a, double b);
     
     // input should be 0 -- 1
     static double tableLookup(double input, double *table, int tableLength);

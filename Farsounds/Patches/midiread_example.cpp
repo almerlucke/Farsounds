@@ -12,6 +12,7 @@
 #include "FSUtils.h"
 #include "FSPatch.h"
 #include "FSTimedTriggerModule.h"
+#include "FSOneShotTriggerModule.h"
 #include "FSMultiplierModule.h"
 #include "FSAllpassModule.h"
 #include "FSSequenceModule.h"
@@ -19,7 +20,9 @@
 #include "FSRampModule.h"
 #include "FSScalerModule.h"
 #include "FSSpawnModule.h"
+#include "FSDCSineModule.h"
 #include "FSDX7.h"
+#include "FSMoogFilterModule.h"
 #include "FSBiquadFilterModule.h"
 #include "FSSpawnFactory.h"
 #include <FCMidi.h>
@@ -70,7 +73,6 @@ public:
     
     void startProductionCycle()
     {
-        _firstProduce = false;
     }
     
     FSSpawn *generateSpawnWithEventItem(FCMidiTrackEventItem *eventItem)
@@ -100,14 +102,13 @@ public:
             fflush(stdout);
         }
         
-        double durationInSeconds = deltaTimeTotal * _deltaTimeBaseInSeconds;
-        double triggers[] = {durationInSeconds};
+        double durationInSeconds = deltaTimeTotal * _deltaTimeBaseInSeconds * 1.2;
         
         FSPatch *patch = new FSPatch(0, 1);
         FSSquareModule *square = new FSSquareModule(FSUtils::mtof(event->param1()));
         FSADSREnvelopeModule *adsr = new FSADSREnvelopeModule();
         FSScalerModule *scaler = new FSScalerModule();
-        FSTimedTriggerModule *trigger = new FSTimedTriggerModule(triggers, 1, 0, false);
+        FSOneShotTriggerModule *trigger = new FSOneShotTriggerModule();
         
         patch->addModule(square);
         patch->addModule(adsr);
@@ -140,6 +141,7 @@ public:
         FSSpawn *spawn = NULL;
         
         if (_eventItem != NULL) {
+            
             if (_deltaTimeSamples == 0) {
                 if (_eventItem->event->eventType() == FCMidiEventTypeChannel &&
                     ((FCMidiChannelEvent *)_eventItem->event)->channelEventType() == FCMidiChannelEventTypeNoteOn) {
@@ -187,7 +189,9 @@ public:
     
     void endProductionCycle()
     {
-        _deltaTimeSamples--;
+        if (_eventItem != NULL && _deltaTimeSamples > 0) {
+            _deltaTimeSamples--;
+        } 
     }
 };
 
@@ -199,14 +203,31 @@ void midiread_example()
     FCMidiFile *midiFile;
     FCMidiErrorType error = FCMidiErrorTypeNone;
     midiFile = new FCMidiFile();
-    midiFile->read("/Users/almerlucke/Documents/MidiFiles/take5.mid", &error);
+    midiFile->read("/Users/almerlucke/Documents/MidiFiles/MSX/GALIOUS.mid", &error);
     
-    FSPatch *mainPatch = new FSPatch(0, 1);
+    FCMidiTrack *track = &midiFile->tracks()[0];
+    
+    FSPatch *mainPatch = new FSPatch(0, 2);
     FSScalerModule *scaler = new FSScalerModule(0.2);
     
-    mainPatch->addModule(scaler);
+    uint32_t microSecondsPerQuarterNote = track->tempoMPQN();
+    double secondsPerQuarterNote = microSecondsPerQuarterNote / 1000000.0;
     
-    printf("num tracks %d\n", midiFile->numTracks());
+    FSAllpassModule *allpass1 = new FSAllpassModule(FSEnvironment::sampleRate * secondsPerQuarterNote * 0.375, 0.5);
+    FSAllpassModule *allpass2 = new FSAllpassModule(FSEnvironment::sampleRate * secondsPerQuarterNote * 0.875, 0.6);
+    FSMultiplierModule *allpassMult1 = new FSMultiplierModule(0.3);
+    FSMultiplierModule *allpassMult2 = new FSMultiplierModule(0.3);
+    
+    mainPatch->addModule(scaler);
+    mainPatch->addModule(allpass1);
+    mainPatch->addModule(allpass2);
+    mainPatch->addModule(allpassMult1);
+    mainPatch->addModule(allpassMult2);
+    
+    allpass1->connect(scaler, 0, 0);
+    allpass2->connect(scaler, 0, 0);
+    allpassMult1->connect(allpass1, 0, 0);
+    allpassMult2->connect(allpass2, 0, 0);
     
     for (int i = 0; i < midiFile->numTracks(); i++) {
         FSMidiMan *midiMan = new FSMidiMan(midiFile, i);
@@ -215,9 +236,12 @@ void midiread_example()
         scaler->connect(spawnModule, 0, 0);
     }
     
+    mainPatch->outputProxyAtIndex(0)->connect(allpassMult1, 0, 0);
     mainPatch->outputProxyAtIndex(0)->connect(scaler, 0, 0);
+    mainPatch->outputProxyAtIndex(1)->connect(allpassMult2, 0, 0);
+    mainPatch->outputProxyAtIndex(1)->connect(scaler, 0, 0);
     
-    FSUtils::generateSoundFile("test.wav", mainPatch, 116);
+    FSUtils::generateSoundFile("test.wav", mainPatch, 180);
     
     delete midiFile;
     delete mainPatch;

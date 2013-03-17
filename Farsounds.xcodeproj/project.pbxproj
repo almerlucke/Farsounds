@@ -57,6 +57,7 @@
 		9BFDE39C16D53E2C00E8D4EF /* FSSpawnFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE39A16D53E2C00E8D4EF /* FSSpawnFactory.cpp */; };
 		9BFDE39F16D53E4A00E8D4EF /* FSSpawnModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE39D16D53E4A00E8D4EF /* FSSpawnModule.cpp */; };
 		9BFDE3A216D55DE600E8D4EF /* spawnfactory_example1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE3A016D55DE600E8D4EF /* spawnfactory_example1.cpp */; };
+		CB55AC5316F3984D00215CDB /* FSMoogFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB55AC5116F3984D00215CDB /* FSMoogFilter.cpp */; };
 		CB5D635316E676000073FFE6 /* libFCMidi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5D635216E676000073FFE6 /* libFCMidi.dylib */; };
 		CBA40B3316DD331C00646ABB /* FSMultiSegmentEnvelope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA40B3116DD331C00646ABB /* FSMultiSegmentEnvelope.cpp */; };
 		CBC90A8316EE7A5500C08EBF /* midiread_example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC90A8116EE7A5500C08EBF /* midiread_example.cpp */; };
@@ -178,6 +179,8 @@
 		9BFDE39E16D53E4A00E8D4EF /* FSSpawnModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSpawnModule.h; sourceTree = "<group>"; };
 		9BFDE3A016D55DE600E8D4EF /* spawnfactory_example1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = spawnfactory_example1.cpp; sourceTree = "<group>"; };
 		9BFDE3A116D55DE600E8D4EF /* spawnfactory_example1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spawnfactory_example1.h; sourceTree = "<group>"; };
+		CB55AC5116F3984D00215CDB /* FSMoogFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSMoogFilter.cpp; sourceTree = "<group>"; };
+		CB55AC5216F3984D00215CDB /* FSMoogFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMoogFilter.h; sourceTree = "<group>"; };
 		CB5D635216E676000073FFE6 /* libFCMidi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libFCMidi.dylib; path = ../../../../../../usr/local/lib/libFCMidi.dylib; sourceTree = "<group>"; };
 		CBA40B3116DD331C00646ABB /* FSMultiSegmentEnvelope.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSMultiSegmentEnvelope.cpp; sourceTree = "<group>"; };
 		CBA40B3216DD331C00646ABB /* FSMultiSegmentEnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMultiSegmentEnvelope.h; sourceTree = "<group>"; };
@@ -369,6 +372,8 @@
 				CBF91E8516DEB5FE009C1B26 /* FSBiquadFilter.cpp */,
 				CBC90A8516EE7E1500C08EBF /* FSVoicedADSREnvelope.h */,
 				CBC90A8416EE7E1500C08EBF /* FSVoicedADSREnvelope.cpp */,
+				CB55AC5216F3984D00215CDB /* FSMoogFilter.h */,
+				CB55AC5116F3984D00215CDB /* FSMoogFilter.cpp */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -496,6 +501,7 @@
 				CBF91E8A16DEBBF9009C1B26 /* FSBiquadFilterModule.cpp in Sources */,
 				CBC90A8316EE7A5500C08EBF /* midiread_example.cpp in Sources */,
 				CBC90A8616EE7E1500C08EBF /* FSVoicedADSREnvelope.cpp in Sources */,
+				CB55AC5316F3984D00215CDB /* FSMoogFilter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
