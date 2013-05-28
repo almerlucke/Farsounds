@@ -25,201 +25,50 @@
 
 FSDX7Settings tubularBells()
 {
-    DX7Settings dx7Settings;
-    DX7OperatorSettings *dx7OperatorSettings = &dx7Settings.operatorSettings[0];
-    dx7OperatorSettings->pitchScale = 200.1;
-    dx7OperatorSettings->velocityLevel = 0.4;
-    dx7OperatorSettings->feedbackLevel = 0.2;
-    dx7OperatorSettings->pitchIndependent = true;
-    dx7OperatorSettings->attackLevel = 1.0;
-    dx7OperatorSettings->attackShape = 1.0;
-    dx7OperatorSettings->attackTimePercentage = 0.021;
-    dx7OperatorSettings->decayLevel = 0.4;
-    dx7OperatorSettings->decayShape = 1.0;
-    dx7OperatorSettings->decayTimePercentage = 0.1;
-    dx7OperatorSettings->sustainTimePercentage = 0.1;
-    dx7OperatorSettings->releaseShape = 1.0;
+    FSDX7Settings settings;
     
-    dx7OperatorSettings = &dx7Settings.operatorSettings[1];
-    dx7OperatorSettings->pitchScale = 2.03;
-    dx7OperatorSettings->velocityLevel = 0.4;
-    dx7OperatorSettings->feedbackLevel = 0.0;
-    dx7OperatorSettings->pitchIndependent = false;
-    dx7OperatorSettings->attackLevel = 1.0;
-    dx7OperatorSettings->attackShape = 1.0;
-    dx7OperatorSettings->attackTimePercentage = 0.02;
-    dx7OperatorSettings->decayLevel = 0.4;
-    dx7OperatorSettings->decayShape = 1.0;
-    dx7OperatorSettings->decayTimePercentage = 0.02;
-    dx7OperatorSettings->sustainTimePercentage = 0.1;
-    dx7OperatorSettings->releaseShape = 1.0;
+    settings.setWave(FSDX7OperatorWaveSine);
+    settings.setFeedbackLevel(0.2);
+    settings.setFixedPitch(false, false, false, false, false, false);
+    settings.setPitchScale(1.0, 1.5, 2.0, 3.51, 4, 2.01);
+    settings.setVelocityLevel(0.95, 0.78, 0.99, 0.75, 0.99, 0.85);
+    settings.setAttackLevel(1.0, 1.0, 1.0, 1.0, 1.0, 1.0);
+    settings.setAttackTime(0.01, 0.01, 0.01, 0.01, 0.01, 0.01);
+    settings.setAttackShape(1, 1, 1, 1, 1, 1);
+    settings.setDecayLevel(0.3, 0.3, 0.3, 0.3, 0.3, 0.3);
+    settings.setDecayTime(0.01, 0.01, 0.01, 0.01, 0.01, 0.01);
+    settings.setDecayShape(1, 1, 1, 1, 1, 1);
+    settings.setSustainTime(0.01, 0.01, 0.01, 0.01, 0.01, 0.01);
+    settings.setReleaseShape(1, 1, 1, 1, 1, 1);
     
-    dx7OperatorSettings = &dx7Settings.operatorSettings[2];
-    dx7OperatorSettings->pitchScale = 1.01;
-    dx7OperatorSettings->velocityLevel = 0.8;
-    dx7OperatorSettings->feedbackLevel = 0.0;
-    dx7OperatorSettings->pitchIndependent = false;
-    dx7OperatorSettings->attackLevel = 1.0;
-    dx7OperatorSettings->attackShape = 1.0;
-    dx7OperatorSettings->attackTimePercentage = 0.03;
-    dx7OperatorSettings->decayLevel = 0.4;
-    dx7OperatorSettings->decayShape = 1.0;
-    dx7OperatorSettings->decayTimePercentage = 0.02;
-    dx7OperatorSettings->sustainTimePercentage = 0.1;
-    dx7OperatorSettings->releaseShape = 1.0;
-    
-    dx7OperatorSettings = &dx7Settings.operatorSettings[3];
-    dx7OperatorSettings->pitchScale = 1.02;
-    dx7OperatorSettings->velocityLevel = 0.3;
-    dx7OperatorSettings->feedbackLevel = 0.0;
-    dx7OperatorSettings->pitchIndependent = false;
-    dx7OperatorSettings->attackLevel = 1.0;
-    dx7OperatorSettings->attackShape = 1.0;
-    dx7OperatorSettings->attackTimePercentage = 0.04;
-    dx7OperatorSettings->decayLevel = 0.4;
-    dx7OperatorSettings->decayShape = 1.0;
-    dx7OperatorSettings->decayTimePercentage = 0.021;
-    dx7OperatorSettings->sustainTimePercentage = 0.1;
-    dx7OperatorSettings->releaseShape = 1.0;
-    
-    dx7OperatorSettings = &dx7Settings.operatorSettings[4];
-    dx7OperatorSettings->pitchScale = 2.02;
-    dx7OperatorSettings->velocityLevel = 0.8;
-    dx7OperatorSettings->feedbackLevel = 0.0;
-    dx7OperatorSettings->pitchIndependent = false;
-    dx7OperatorSettings->attackLevel = 1.0;
-    dx7OperatorSettings->attackShape = 1.0;
-    dx7OperatorSettings->attackTimePercentage = 0.01;
-    dx7OperatorSettings->decayLevel = 0.4;
-    dx7OperatorSettings->decayShape = 1.0;
-    dx7OperatorSettings->decayTimePercentage = 0.01;
-    dx7OperatorSettings->sustainTimePercentage = 0.1;
-    dx7OperatorSettings->releaseShape = 1.0;
-    
-    dx7OperatorSettings = &dx7Settings.operatorSettings[5];
-    dx7OperatorSettings->pitchScale = 0.99;
-    dx7OperatorSettings->velocityLevel = 0.3;
-    dx7OperatorSettings->feedbackLevel = 0.0;
-    dx7OperatorSettings->pitchIndependent = false;
-    dx7OperatorSettings->attackLevel = 1.0;
-    dx7OperatorSettings->attackShape = 1.0;
-    dx7OperatorSettings->attackTimePercentage = 0.01;
-    dx7OperatorSettings->decayLevel = 0.4;
-    dx7OperatorSettings->decayShape = 1.0;
-    dx7OperatorSettings->decayTimePercentage = 0.01;
-    dx7OperatorSettings->sustainTimePercentage = 0.1;
-    dx7OperatorSettings->releaseShape = 1.0;
-    
-    return dx7Settings;
+    return settings;
 }
 
 FSDX7Settings tubularBells2()
 {
-    DX7Settings dx7Settings;
-    DX7OperatorSettings *dx7OperatorSettings = &dx7Settings.operatorSettings[0];
-    dx7OperatorSettings->pitchScale = 0.25;
-    dx7OperatorSettings->velocityLevel = 0.3;
-    dx7OperatorSettings->feedbackLevel = 0.2;
-    dx7OperatorSettings->pitchIndependent = false;
-    dx7OperatorSettings->attackLevel = 1.0;
-    dx7OperatorSettings->attackShape = 1.0;
-    dx7OperatorSettings->attackTimePercentage = 0.01;
-    dx7OperatorSettings->decayLevel = 0.4;
-    dx7OperatorSettings->decayShape = 1.0;
-    dx7OperatorSettings->decayTimePercentage = 0.01;
-    dx7OperatorSettings->sustainTimePercentage = 0.1;
-    dx7OperatorSettings->releaseShape = 1.0;
+    FSDX7Settings settings;
     
-    dx7OperatorSettings = &dx7Settings.operatorSettings[1];
-    dx7OperatorSettings->pitchScale = 3.02;
-    dx7OperatorSettings->velocityLevel = 0.3;
-    dx7OperatorSettings->feedbackLevel = 0.0;
-    dx7OperatorSettings->pitchIndependent = false;
-    dx7OperatorSettings->attackLevel = 1.0;
-    dx7OperatorSettings->attackShape = 1.0;
-    dx7OperatorSettings->attackTimePercentage = 0.02;
-    dx7OperatorSettings->decayLevel = 0.4;
-    dx7OperatorSettings->decayShape = 1.0;
-    dx7OperatorSettings->decayTimePercentage = 0.02;
-    dx7OperatorSettings->sustainTimePercentage = 0.1;
-    dx7OperatorSettings->releaseShape = 1.0;
+    settings.setWave(FSDX7OperatorWaveSine);
+    settings.setFeedbackLevel(0.2);
+    settings.setFixedPitch(false, false, false, false, false, false);
+    settings.setPitchScale(1.01, 3.5, 1.02, 3.54, 2.0, 2.01);
+    settings.setVelocityLevel(0.95, 0.78, 0.99, 0.75, 0.99, 0.85);
+    settings.setAttackLevel(1.0, 1.0, 1.0, 1.0, 1.0, 1.0);
+    settings.setAttackTime(0.01, 0.01, 0.01, 0.01, 0.01, 0.01);
+    settings.setAttackShape(1, 1, 1, 1, 1, 1);
+    settings.setDecayLevel(0.3, 0.3, 0.3, 0.3, 0.3, 0.3);
+    settings.setDecayTime(0.01, 0.01, 0.01, 0.01, 0.01, 0.01);
+    settings.setDecayShape(1, 1, 1, 1, 1, 1);
+    settings.setSustainTime(0.01, 0.01, 0.01, 0.01, 0.01, 0.01);
+    settings.setReleaseShape(1, 1, 1, 1, 1, 1);
     
-    dx7OperatorSettings = &dx7Settings.operatorSettings[2];
-    dx7OperatorSettings->pitchScale = 2.0;
-    dx7OperatorSettings->velocityLevel = 0.3;
-    dx7OperatorSettings->feedbackLevel = 0.0;
-    dx7OperatorSettings->pitchIndependent = false;
-    dx7OperatorSettings->attackLevel = 1.0;
-    dx7OperatorSettings->attackShape = 1.0;
-    dx7OperatorSettings->attackTimePercentage = 0.03;
-    dx7OperatorSettings->decayLevel = 0.4;
-    dx7OperatorSettings->decayShape = 1.0;
-    dx7OperatorSettings->decayTimePercentage = 0.02;
-    dx7OperatorSettings->sustainTimePercentage = 0.1;
-    dx7OperatorSettings->releaseShape = 1.0;
-    
-    dx7OperatorSettings = &dx7Settings.operatorSettings[3];
-    dx7OperatorSettings->pitchScale = 1.05;
-    dx7OperatorSettings->velocityLevel = 0.3;
-    dx7OperatorSettings->feedbackLevel = 0.0;
-    dx7OperatorSettings->pitchIndependent = false;
-    dx7OperatorSettings->attackLevel = 1.0;
-    dx7OperatorSettings->attackShape = 1.0;
-    dx7OperatorSettings->attackTimePercentage = 0.01;
-    dx7OperatorSettings->decayLevel = 0.4;
-    dx7OperatorSettings->decayShape = 1.0;
-    dx7OperatorSettings->decayTimePercentage = 0.01;
-    dx7OperatorSettings->sustainTimePercentage = 0.1;
-    dx7OperatorSettings->releaseShape = 1.0;
-    
-    dx7OperatorSettings = &dx7Settings.operatorSettings[4];
-    dx7OperatorSettings->pitchScale = 2.01;
-    dx7OperatorSettings->velocityLevel = 0.4;
-    dx7OperatorSettings->feedbackLevel = 0.0;
-    dx7OperatorSettings->pitchIndependent = false;
-    dx7OperatorSettings->attackLevel = 1.0;
-    dx7OperatorSettings->attackShape = 1.0;
-    dx7OperatorSettings->attackTimePercentage = 0.02;
-    dx7OperatorSettings->decayLevel = 0.4;
-    dx7OperatorSettings->decayShape = 1.0;
-    dx7OperatorSettings->decayTimePercentage = 0.01;
-    dx7OperatorSettings->sustainTimePercentage = 0.1;
-    dx7OperatorSettings->releaseShape = 1.0;
-    
-    dx7OperatorSettings = &dx7Settings.operatorSettings[5];
-    dx7OperatorSettings->pitchScale = 400.1;
-    dx7OperatorSettings->velocityLevel = 0.3;
-    dx7OperatorSettings->feedbackLevel = 0.0;
-    dx7OperatorSettings->pitchIndependent = true;
-    dx7OperatorSettings->attackLevel = 1.0;
-    dx7OperatorSettings->attackShape = 1.0;
-    dx7OperatorSettings->attackTimePercentage = 0.01;
-    dx7OperatorSettings->decayLevel = 0.4;
-    dx7OperatorSettings->decayShape = 1.0;
-    dx7OperatorSettings->decayTimePercentage = 0.01;
-    dx7OperatorSettings->sustainTimePercentage = 0.1;
-    dx7OperatorSettings->releaseShape = 1.0;
-    
-    return dx7Settings;
+    return settings;
 }
 
 
 int main(int argc, const char * argv[])
 {
     FSUtils::seedRand();
-
-    double times[5] = {0.15, 0.15, 0.15, 0.3, -0.15};
-    double frequencies[12] = {
-        FSUtils::mtof(72), FSUtils::mtof(71), FSUtils::mtof(45),
-        FSUtils::mtof(67), FSUtils::mtof(41), FSUtils::mtof(55),
-        FSUtils::mtof(33), FSUtils::mtof(47), FSUtils::mtof(48),
-        FSUtils::mtof(74), FSUtils::mtof(88), FSUtils::mtof(53)};
-    double amps1[5] = {1.0, 0.6, 0.4, 0.6, 0.7};
-    
-    double times2[8] = {0.15, 0.15, 0.15, 0.3, -0.15, 0.15, 0.15, -0.3};
-    double frequencies2[4] = {
-        FSUtils::mtof(24), FSUtils::mtof(38), FSUtils::mtof(52), FSUtils::mtof(41)};
-    double amps2[5] = {1.0, 0.6, 0.4, 0.6, 0.7};
     
     double times[6] = {0.2, 0.2, 0.2, 0.4, 0.40, 0.6};
     double times2[6] = {0.2, 0.20, 0.4, 0.6, 0.20, 0.6};
@@ -242,37 +91,25 @@ int main(int argc, const char * argv[])
     FSRampModule *ramp2 = new FSRampModule(100, 100, 0.01, 0.6);
     FSMultiplierModule *amp = new FSMultiplierModule(2);
     FSMultiplierModule *amp2 = new FSMultiplierModule(2);
-    FSAllpassModule *allpass1 = new FSAllpassModule(FSEnvironment::sampleRate * 0.6, 0.3);
-    FSAllpassModule *allpass2 = new FSAllpassModule(FSEnvironment::sampleRate * 0.45, 0.2);
-
-    DX7 *dx7 = new DX7(settings1(), mainPatch);
-    dx7->connectTrigger(trigger1, 0);
-    dx7->connectDuration(trigger1, 1);
-    dx7->connectPitch(sequencer1, 0);
-    dx7->op2->connectModulator(dx7->op1);
-    dx7->op3->connectModulator(dx7->op2);
-    dx7->op4->connectModulator(dx7->op3);
-    dx7->op6->connectModulator(dx7->op5);
+    FSAllpassModule *allpass = new FSAllpassModule(FSEnvironment::sampleRate * 0.3, 0.4);
+    FSAllpassModule *allpass2 = new FSAllpassModule(FSEnvironment::sampleRate * 0.6, 0.4);
     
-    DX7 *dx72 = new DX7(settings2(), mainPatch);
-    dx72->connectTrigger(trigger2, 0);
-    dx72->connectDuration(trigger2, 1);
-    dx72->connectPitch(sequencer2, 0);
-    dx72->op2->connectModulator(dx72->op1);
-    dx72->op3->connectModulator(dx72->op2);
-    dx72->op4->connectModulator(dx72->op3);
-    dx72->op6->connectModulator(dx72->op5);
+    FSDX7 *dx7 = new FSDX7(tubularBells(), FSDX7_ALGORITHM24, amp, 0, mainPatch);
+    dx7->connectTrigger(trigger, 0);
+    dx7->connectDuration(trigger, 1);
+    dx7->connectPitch(ramp, 0);
     
-    sequencer1->connect(trigger1, 0, 0);
-    ampSequencer1->connect(trigger1, 0, 0);
-    amp1->connect(dx7->op4->amp, 0, 0);
-    amp1->connect(dx7->op6->amp, 0, 0);
-    amp1->connect(ampSequencer1, 0, 1);
-    mainPatch->addModule(amp1);
-    mainPatch->addModule(trigger1);
-    mainPatch->addModule(allpass1);
-    mainPatch->addModule(sequencer1);
-    mainPatch->addModule(ampSequencer1);
+    FSDX7 *dx7_2 = new FSDX7(tubularBells2(), FSDX7_ALGORITHM25, amp2, 0, mainPatch);
+    dx7_2->connectTrigger(trigger2, 0);
+    dx7_2->connectDuration(trigger2, 1);
+    dx7_2->connectPitch(ramp2, 0);
+    
+    sequencer->connect(trigger, 0, 0);
+    ramp->connect(trigger, 0, 0);
+    ramp->connect(sequencer, 0, 2);
+    ampSequencer->connect(trigger, 0, 0);
+    amp->connect(ampSequencer, 0, 1);
+    allpass->connect(amp, 0, 0);
     
     sequencer2->connect(trigger2, 0, 0);
     ramp2->connect(trigger2, 0, 0);
@@ -298,10 +135,7 @@ int main(int argc, const char * argv[])
     mainPatch->outputProxyAtIndex(0)->connect(allpass, 0, 0);
     mainPatch->outputProxyAtIndex(1)->connect(allpass2, 0, 0);
     
-    mainPatch->outputProxyAtIndex(0)->connect(allpass1, 0, 0);
-    mainPatch->outputProxyAtIndex(0)->connect(allpass2, 0, 0);
-
-    FSUtils::generateSoundFile("/Users/almerlucke/Desktop/test2.wav", mainPatch, 60);
+    FSUtils::generateSoundFile("/Users/almerlucke/Desktop/test3.wav", mainPatch, 120);
     
     delete dx7;
     delete mainPatch;
