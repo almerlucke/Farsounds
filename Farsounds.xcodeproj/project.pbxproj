@@ -58,6 +58,14 @@
 		9BFDE39C16D53E2C00E8D4EF /* FSSpawnFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE39A16D53E2C00E8D4EF /* FSSpawnFactory.cpp */; };
 		9BFDE39F16D53E4A00E8D4EF /* FSSpawnModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE39D16D53E4A00E8D4EF /* FSSpawnModule.cpp */; };
 		9BFDE3A216D55DE600E8D4EF /* spawnfactory_example1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE3A016D55DE600E8D4EF /* spawnfactory_example1.cpp */; };
+		CB20CA511755345700EDF25B /* FSMarkovChain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB20CA4D1755345700EDF25B /* FSMarkovChain.cpp */; };
+		CB20CA521755345700EDF25B /* FSMarkovChainState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB20CA4F1755345700EDF25B /* FSMarkovChainState.cpp */; };
+		CB20CA551755391E00EDF25B /* FSSimpleMarkovChain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB20CA531755391E00EDF25B /* FSSimpleMarkovChain.cpp */; };
+		CB20CA5817553A5000EDF25B /* FSMarkovChainModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB20CA5617553A5000EDF25B /* FSMarkovChainModule.cpp */; };
+		CB20CA5B17553EF300EDF25B /* FSValueGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB20CA5917553EF300EDF25B /* FSValueGenerator.cpp */; };
+		CB20CA5E17553F3300EDF25B /* markov_example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB20CA5C17553F3300EDF25B /* markov_example.cpp */; };
+		CB20CA611755411300EDF25B /* FSSequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB20CA5F1755411200EDF25B /* FSSequence.cpp */; };
+		CB20CA661755423500EDF25B /* FSSingleValueGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB20CA641755423500EDF25B /* FSSingleValueGenerator.cpp */; };
 		CBA40B3316DD331C00646ABB /* FSMultiSegmentEnvelope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA40B3116DD331C00646ABB /* FSMultiSegmentEnvelope.cpp */; };
 		CBF91E8716DEB5FE009C1B26 /* FSBiquadFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBF91E8516DEB5FE009C1B26 /* FSBiquadFilter.cpp */; };
 		CBF91E8A16DEBBF9009C1B26 /* FSBiquadFilterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBF91E8816DEBBF9009C1B26 /* FSBiquadFilterModule.cpp */; };
@@ -178,6 +186,22 @@
 		9BFDE39E16D53E4A00E8D4EF /* FSSpawnModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSpawnModule.h; sourceTree = "<group>"; };
 		9BFDE3A016D55DE600E8D4EF /* spawnfactory_example1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = spawnfactory_example1.cpp; sourceTree = "<group>"; };
 		9BFDE3A116D55DE600E8D4EF /* spawnfactory_example1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spawnfactory_example1.h; sourceTree = "<group>"; };
+		CB20CA4D1755345700EDF25B /* FSMarkovChain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSMarkovChain.cpp; sourceTree = "<group>"; };
+		CB20CA4E1755345700EDF25B /* FSMarkovChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMarkovChain.h; sourceTree = "<group>"; };
+		CB20CA4F1755345700EDF25B /* FSMarkovChainState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSMarkovChainState.cpp; sourceTree = "<group>"; };
+		CB20CA501755345700EDF25B /* FSMarkovChainState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMarkovChainState.h; sourceTree = "<group>"; };
+		CB20CA531755391E00EDF25B /* FSSimpleMarkovChain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSimpleMarkovChain.cpp; sourceTree = "<group>"; };
+		CB20CA541755391E00EDF25B /* FSSimpleMarkovChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSimpleMarkovChain.h; sourceTree = "<group>"; };
+		CB20CA5617553A5000EDF25B /* FSMarkovChainModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSMarkovChainModule.cpp; sourceTree = "<group>"; };
+		CB20CA5717553A5000EDF25B /* FSMarkovChainModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMarkovChainModule.h; sourceTree = "<group>"; };
+		CB20CA5917553EF300EDF25B /* FSValueGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSValueGenerator.cpp; sourceTree = "<group>"; };
+		CB20CA5A17553EF300EDF25B /* FSValueGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSValueGenerator.h; sourceTree = "<group>"; };
+		CB20CA5C17553F3300EDF25B /* markov_example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = markov_example.cpp; sourceTree = "<group>"; };
+		CB20CA5D17553F3300EDF25B /* markov_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = markov_example.h; sourceTree = "<group>"; };
+		CB20CA5F1755411200EDF25B /* FSSequence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSequence.cpp; sourceTree = "<group>"; };
+		CB20CA601755411300EDF25B /* FSSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSequence.h; sourceTree = "<group>"; };
+		CB20CA641755423500EDF25B /* FSSingleValueGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSSingleValueGenerator.cpp; sourceTree = "<group>"; };
+		CB20CA651755423500EDF25B /* FSSingleValueGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSingleValueGenerator.h; sourceTree = "<group>"; };
 		CBA40B3116DD331C00646ABB /* FSMultiSegmentEnvelope.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSMultiSegmentEnvelope.cpp; sourceTree = "<group>"; };
 		CBA40B3216DD331C00646ABB /* FSMultiSegmentEnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMultiSegmentEnvelope.h; sourceTree = "<group>"; };
 		CBF91E8516DEB5FE009C1B26 /* FSBiquadFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSBiquadFilter.cpp; sourceTree = "<group>"; };
@@ -215,6 +239,8 @@
 				9BDBF5F316D8F0D100940124 /* soundfile_granular_example.cpp */,
 				9BDBF5FF16D9333F00940124 /* dx7_example.h */,
 				9BDBF5FE16D9333F00940124 /* dx7_example.cpp */,
+				CB20CA5D17553F3300EDF25B /* markov_example.h */,
+				CB20CA5C17553F3300EDF25B /* markov_example.cpp */,
 			);
 			path = Patches;
 			sourceTree = "<group>";
@@ -238,6 +264,7 @@
 		9B23912316CC2650001C49E5 /* Farsounds */ = {
 			isa = PBXGroup;
 			children = (
+				CB20CA4C1755339C00EDF25B /* Algo */,
 				9BDBF5F616D9298200940124 /* Instruments */,
 				9B1F6E0D16CED9D400556320 /* Patches */,
 				9B97FA3B16CE312500B029F9 /* Utils */,
@@ -329,6 +356,8 @@
 				9BE4E76E16D69295002E107E /* FSMultiplierModule.cpp */,
 				CBF91E8916DEBBF9009C1B26 /* FSBiquadFilterModule.h */,
 				CBF91E8816DEBBF9009C1B26 /* FSBiquadFilterModule.cpp */,
+				CB20CA5717553A5000EDF25B /* FSMarkovChainModule.h */,
+				CB20CA5617553A5000EDF25B /* FSMarkovChainModule.cpp */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -381,6 +410,41 @@
 				9BDBF5FB16D92B4300940124 /* FSDX7.cpp */,
 			);
 			path = DX7;
+			sourceTree = "<group>";
+		};
+		CB20CA4C1755339C00EDF25B /* Algo */ = {
+			isa = PBXGroup;
+			children = (
+				CB20CA631755412E00EDF25B /* MarkovChains */,
+				CB20CA621755411E00EDF25B /* ValueGenerators */,
+			);
+			path = Algo;
+			sourceTree = "<group>";
+		};
+		CB20CA621755411E00EDF25B /* ValueGenerators */ = {
+			isa = PBXGroup;
+			children = (
+				CB20CA5A17553EF300EDF25B /* FSValueGenerator.h */,
+				CB20CA5917553EF300EDF25B /* FSValueGenerator.cpp */,
+				CB20CA651755423500EDF25B /* FSSingleValueGenerator.h */,
+				CB20CA641755423500EDF25B /* FSSingleValueGenerator.cpp */,
+				CB20CA601755411300EDF25B /* FSSequence.h */,
+				CB20CA5F1755411200EDF25B /* FSSequence.cpp */,
+			);
+			name = ValueGenerators;
+			sourceTree = "<group>";
+		};
+		CB20CA631755412E00EDF25B /* MarkovChains */ = {
+			isa = PBXGroup;
+			children = (
+				CB20CA501755345700EDF25B /* FSMarkovChainState.h */,
+				CB20CA4F1755345700EDF25B /* FSMarkovChainState.cpp */,
+				CB20CA4E1755345700EDF25B /* FSMarkovChain.h */,
+				CB20CA4D1755345700EDF25B /* FSMarkovChain.cpp */,
+				CB20CA541755391E00EDF25B /* FSSimpleMarkovChain.h */,
+				CB20CA531755391E00EDF25B /* FSSimpleMarkovChain.cpp */,
+			);
+			name = MarkovChains;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +550,14 @@
 				CBA40B3316DD331C00646ABB /* FSMultiSegmentEnvelope.cpp in Sources */,
 				CBF91E8716DEB5FE009C1B26 /* FSBiquadFilter.cpp in Sources */,
 				CBF91E8A16DEBBF9009C1B26 /* FSBiquadFilterModule.cpp in Sources */,
+				CB20CA511755345700EDF25B /* FSMarkovChain.cpp in Sources */,
+				CB20CA521755345700EDF25B /* FSMarkovChainState.cpp in Sources */,
+				CB20CA551755391E00EDF25B /* FSSimpleMarkovChain.cpp in Sources */,
+				CB20CA5817553A5000EDF25B /* FSMarkovChainModule.cpp in Sources */,
+				CB20CA5B17553EF300EDF25B /* FSValueGenerator.cpp in Sources */,
+				CB20CA5E17553F3300EDF25B /* markov_example.cpp in Sources */,
+				CB20CA611755411300EDF25B /* FSSequence.cpp in Sources */,
+				CB20CA661755423500EDF25B /* FSSingleValueGenerator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

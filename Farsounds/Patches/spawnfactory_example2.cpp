@@ -214,8 +214,6 @@ public:
 
 void spawnfactory_example2()
 {
-    FSUtils::seedRand();
-    
     FSPatch *mainPatch = new FSPatch(0, 2);
     FSSineRampFactory *factory = new FSSineRampFactory();
     FSSpawnModule *spawnModule = new FSSpawnModule(factory);

@@ -74,8 +74,6 @@ FSPatch *singleSequencer(double freqScale, double ampScale, double moogFreq, dou
 
 void timed_sequence_ramp_example()
 {
-    FSUtils::seedRand();
-    
     double triggerTimes[] = {0.125, 0.125, 0.125, 0.25, 0.25, 0.5, 0.25, 0.5, 1.0, 0.0625, 0.0625, 0.0625};
     double triggerTimes2[] = {0.375, 1.0, 1.75, 0.1875};
     double triggerTimes3[] = {0.625, 1.5, 1.1875};

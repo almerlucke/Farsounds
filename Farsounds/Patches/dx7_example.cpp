@@ -86,8 +86,6 @@ FSDX7Settings settings3()
 
 void dx7_example()
 {
-    FSUtils::seedRand();
-    
     double times[8] = {0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.8, -0.8};
     double frequencies[12] = {
         FSUtils::mtof(36), FSUtils::mtof(53), FSUtils::mtof(69),

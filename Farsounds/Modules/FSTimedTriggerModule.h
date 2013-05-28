@@ -10,6 +10,7 @@
 #define __Farsounds__FSTimedTriggerModule__
 
 #include "FSModule.h"
+#include "FSValueGenerator.h"
 #include <stdint.h>
 
 // one input, an input trigger can be used to reset the timed trigger module
@@ -22,9 +23,11 @@ class FSTimedTriggerModule : public FSModule {
     bool _loop;
     int64_t _counter;
     double _counterFraction;
+    FSValueGenerator *_timeGenerator;
     
 public:
     FSTimedTriggerModule(double *times, int numTimes, double initialDelay, bool loop);
+    FSTimedTriggerModule(FSValueGenerator *timeGenerator, double initialDelay);
     ~FSTimedTriggerModule();
     void run();
 };

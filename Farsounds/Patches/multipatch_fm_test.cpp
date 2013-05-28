@@ -104,8 +104,6 @@ FSPatch *sinePatch()
 
 void multipatch_fm_test()
 {
-    FSUtils::seedRand();
-    
     FSPatch *mainPatch = new FSPatch(0, 2);
     FSPatch *patch1 = sinePatch();
     FSPatch *patch2 = sinePatch();

@@ -9,6 +9,10 @@
 #ifndef __Farsounds__FSUtils__
 #define __Farsounds__FSUtils__
 
+
+#define ARC4_RANDOM_MAX 0x100000000
+
+
 class FSModule;
 
 class FSUtils {
@@ -30,7 +34,6 @@ public:
     static void equalPowerPanMono(double input, double azimuth, double *left, double *right);
     
     // random
-    static void seedRand();
     static double randRange(double low, double high);
     
     // midi note to frequency (A4 - 69 is base)

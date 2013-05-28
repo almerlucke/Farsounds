@@ -126,8 +126,6 @@ public:
 
 void soundfile_granular_example()
 {
-    FSUtils::seedRand();
-    
     FSPatch *mainPatch = new FSPatch(0, 2);
     FSGranularFactory *grainFactory = new FSGranularFactory();
     FSSpawnModule *spawnModule = new FSSpawnModule(grainFactory);

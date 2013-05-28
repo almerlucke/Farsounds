@@ -19,8 +19,6 @@
 
 void timed_sequence_example()
 {
-    FSUtils::seedRand();
-    
     double times[] = {1.0, 0.125, 0.125, 0.25, 0.25, 0.75, -1.25, 0.0625, 0.0625, 0.0625, 0.0625,
         0.0625, 0.0625, 0.03125, 0.03125, 0.03125, 0.03125, 0.03125, 0.03125, 0.125, 0.125, 0.125, 0.125, 0.25, 0.25};
     double freqSequence[] = {FSUtils::mtof(40), FSUtils::mtof(45), FSUtils::mtof(51),

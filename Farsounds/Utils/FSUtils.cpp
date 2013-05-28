@@ -119,10 +119,6 @@ double FSUtils::tableLookup(double input, double *table, int tableLength)
 }
 
 #pragma mark - Random
-void FSUtils::seedRand()
-{
-    srand((unsigned int)time(NULL));
-}
 
 double FSUtils::randRange(double low, double high)
 {
@@ -132,7 +128,7 @@ double FSUtils::randRange(double low, double high)
         low = tmp;
     }
     
-    return low + (high - low) * rand() / (double)RAND_MAX;
+    return low + (high - low) * arc4random() / (double)ARC4_RANDOM_MAX;
 }
 
 #pragma mark - Conversions
