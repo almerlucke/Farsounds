@@ -58,7 +58,6 @@
 		9BFDE39C16D53E2C00E8D4EF /* FSSpawnFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE39A16D53E2C00E8D4EF /* FSSpawnFactory.cpp */; };
 		9BFDE39F16D53E4A00E8D4EF /* FSSpawnModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE39D16D53E4A00E8D4EF /* FSSpawnModule.cpp */; };
 		9BFDE3A216D55DE600E8D4EF /* spawnfactory_example1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDE3A016D55DE600E8D4EF /* spawnfactory_example1.cpp */; };
-		CB5D635316E676000073FFE6 /* libFCMidi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5D635216E676000073FFE6 /* libFCMidi.dylib */; };
 		CBA40B3316DD331C00646ABB /* FSMultiSegmentEnvelope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA40B3116DD331C00646ABB /* FSMultiSegmentEnvelope.cpp */; };
 		CBF91E8716DEB5FE009C1B26 /* FSBiquadFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBF91E8516DEB5FE009C1B26 /* FSBiquadFilter.cpp */; };
 		CBF91E8A16DEBBF9009C1B26 /* FSBiquadFilterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBF91E8816DEBBF9009C1B26 /* FSBiquadFilterModule.cpp */; };
@@ -179,7 +178,6 @@
 		9BFDE39E16D53E4A00E8D4EF /* FSSpawnModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSpawnModule.h; sourceTree = "<group>"; };
 		9BFDE3A016D55DE600E8D4EF /* spawnfactory_example1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = spawnfactory_example1.cpp; sourceTree = "<group>"; };
 		9BFDE3A116D55DE600E8D4EF /* spawnfactory_example1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spawnfactory_example1.h; sourceTree = "<group>"; };
-		CB5D635216E676000073FFE6 /* libFCMidi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libFCMidi.dylib; path = ../../../../../../usr/local/lib/libFCMidi.dylib; sourceTree = "<group>"; };
 		CBA40B3116DD331C00646ABB /* FSMultiSegmentEnvelope.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSMultiSegmentEnvelope.cpp; sourceTree = "<group>"; };
 		CBA40B3216DD331C00646ABB /* FSMultiSegmentEnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMultiSegmentEnvelope.h; sourceTree = "<group>"; };
 		CBF91E8516DEB5FE009C1B26 /* FSBiquadFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FSBiquadFilter.cpp; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B97FA3A16CE2FAE00B029F9 /* libsndfile.a in Frameworks */,
-				CB5D635316E676000073FFE6 /* libFCMidi.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +336,6 @@
 		9B97FA3816CE2F7000B029F9 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				CB5D635216E676000073FFE6 /* libFCMidi.dylib */,
 				9B97FA3916CE2FAE00B029F9 /* libsndfile.a */,
 			);
 			name = Libs;
